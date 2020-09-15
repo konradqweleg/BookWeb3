@@ -12,7 +12,7 @@ import com.squareup.picasso.Picasso
 
 class ListAdapter(private val context: Activity)
     : ArrayAdapter<String>(context,
-    R.layout.onepopularbook) {
+    R.layout.homebook) {
     private var bookMap=mutableMapOf<Int,Book>()
     private var imageBookMap= mutableMapOf<Int,ImageView>()
 
@@ -45,7 +45,7 @@ class ListAdapter(private val context: Activity)
 
     override fun getView(position: Int, view: View?, parent: ViewGroup): View {
         val inflater = context.layoutInflater
-        val rowView = inflater.inflate(R.layout.onepopularbook, null, true)
+        val rowView = inflater.inflate(R.layout.homebook, null, true)
 
 
         val titleText = rowView.findViewById(R.id.List_nameBook) as TextView
@@ -95,7 +95,7 @@ class ListAdapter(private val context: Activity)
                    Picasso.with(context)
                     .load(getContext().resources.getString(R.string.GIVE_IMAGE_BOOK_ADRESS) + oneBookData.idBook)
                     .placeholder(R.drawable.database_icon)
-                    .resize(400, 550)
+                    .resize(295, 430)
                     .centerCrop()
                     .into(imageBook)
 
@@ -105,7 +105,7 @@ class ListAdapter(private val context: Activity)
                 Picasso.with(context)
                     .load(getContext().resources.getString(R.string.GIVE_IMAGE_BOOK_ADRESS) + oneBookData.idBook)
                     .placeholder(R.drawable.database_icon)
-                    .resize(400, 550)
+                    .resize(295, 430)
                     .centerCrop()
                     .into(imageBookOne)
                 imageBookMap[position] = imageBookOne
