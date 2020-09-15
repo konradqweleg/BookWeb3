@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.WritersProfile.WritersProfile">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+
+
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:src="@drawable/arrow_left"
+            android:id="@+id/ProfileWriters_returnToMenuArrow"
+            android:layout_alignBaseline="@+id/ProfileWriters_favoriteBookAdd"
+            android:layout_alignTop="@+id/ProfileWriters_favoriteBookAdd"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_height="30dp"
+            android:contentDescription="" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_marginTop="-5dp"
+            android:id="@+id/ProfileWriters_favoriteBookAdd"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_heart_icon"
+            android:layout_height="30dp"
+            android:contentDescription="@string/Book_addToFavorite" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/Book_scroll"
+        android:fillViewport="true"
+        android:layout_marginBottom="60dp"
+
+        android:layout_marginTop="39dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="60dp"
+            android:id="@+id/ProfileWriters_relLayout"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:layout_width="180dp"
+                android:id="@+id/ProfileWriters_photoWriters"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/autors"
+                android:layout_height="200dp"
+                android:contentDescription="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/Book_mark"
+                android:layout_toEndOf="@+id/ProfileWriters_photoWriters"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:id="@+id/ProfileWriters_markWriters"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/ProfileWriters_nameAuthors"
+                android:layout_height="wrap_content" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="5,5"
+                android:id="@+id/ProfileWriters_writersMark"
+                android:layout_below="@+id/ProfileWriters_nameAuthors"
+                android:layout_toEndOf="@+id/ProfileWriters_markWriters"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/colorAccent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Książek:"
+                android:layout_toEndOf="@+id/ProfileWriters_photoWriters"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:id="@+id/ProfileWriters_markWritersx"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/ProfileWriters_markWriters"
+                android:layout_height="wrap_content" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="22"
+                android:id="@+id/ProfileWriters_writeBook"
+                android:layout_below="@+id/ProfileWriters_markWriters"
+                android:layout_toEndOf="@+id/ProfileWriters_markWriters"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/colorAccent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_toEndOf="@+id/ProfileWriters_photoWriters"
+                android:layout_above="@+id/ProfileWriters_ifTopBook"
+                android:id="@+id/Book_yearsPublishText"
+                android:layout_marginBottom="15dp"
+                android:text="Data urodzenia"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_toEndOf="@+id/Book_yearsPublishText"
+                android:layout_marginBottom="15dp"
+                android:id="@+id/Book_yearPublish"
+                android:textStyle="bold"
+                android:text=" 1988"
+                android:layout_above="@+id/ProfileWriters_ifTopBook"
+                android:layout_height="wrap_content" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:text="Wojciech Chmielarz"
+
+                android:textSize="25sp"
+                android:fontFamily="@font/roboto"
+                android:id="@+id/ProfileWriters_nameAuthors"
+
+                android:layout_toEndOf="@+id/ProfileWriters_photoWriters"
+                android:textColor="#000"
+                android:layout_marginTop="16dp"
+                android:layout_height="wrap_content" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/ProfileWriters_nameAuthors"
+                android:layout_toEndOf="@+id/ProfileWriters_photoWriters"
+                android:text=""
+                android:textSize="50sp"
+                android:textColor="@color/colorAccent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+
+
+
+
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Top książka"
+                android:textColor="@color/colorAccent2"
+                android:id="@+id/ProfileWriters_ifTopBook"
+                android:background="@drawable/gray_theme"
+                android:layout_toEndOf="@+id/ProfileWriters_photoWriters"
+                android:layout_alignBottom="@+id/ProfileWriters_photoWriters"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Top autor"
+                android:textColor="@color/colorAccent2"
+                android:id="@+id/ProfileWriters_ifTopWriters"
+                android:background="@drawable/gray_theme"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@+id/ProfileWriters_ifTopBook"
+                android:layout_alignBottom="@+id/ProfileWriters_photoWriters"
+                android:layout_height="wrap_content" />
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Życiorys"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/Book_description"
+                android:textSize="20sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_below="@+id/ProfileWriters_photoWriters"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/ProfileWriters_infoAboutAuthors"
+                android:layout_below="@+id/Book_description"
+                android:text="Wojciech Chmielarz (ur. 1984) – autor kryminałów, dziennikarz, laureat Nagrody Wielkiego Kalibru (2015 – za powieść „Przejęcie) i Wielkiego Kalibru Czytelników (2019 – „Żmijowisko), sześciokrotnie nominowany do tej nagrody. Publikował m.in. w „Pulsie Biznesu, „Pressie, „Nowej Fantastyce, „Pocisku i „Polityce. Uznawany za jednego z najważniejszych współczesnych pisarzy kryminalnych. Autor cyklu powieści o komisarzu Jakubie Mortce: Podpalac (2012), Farma lalek (2013), Przejęcie (2014), Osiedle marzeń (2016), Cienie (2018) i cyklu gliwickiego: Wampir (2015) i Zombie (2017), postapokaliptycznej powieści Królowa głodu(2014) oraz thrillerów psychologicznych - Żmijowisko (2018 – bestseller Lubimyczytać.pl, nagroda Złotego Pocisku i Grand Prix Warszawskiego Festiwalu Kryminalnego) oraz Rana (2019).
+Na podstawie powieści „Żmijowisko” powstał serial dla Canal + (scenariusz: Dana Łukasińska, Wojciech Chmielarz, reżyseria: Łukasz Palkowski).
+Wojciech Chmielarz pochodzi z Gliwic, mieszka z rodziną w Warszawie."
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_below="@+id/ProfileWriters_infoAboutAuthors"
+                android:layout_marginTop="10dp"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:text="Ksiażki autora"
+                android:textStyle="bold"
+                android:id="@+id/fv"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_height="wrap_content"></TextView>
+
+            <org.lucasr.twowayview.TwoWayView
+                android:layout_width="match_parent"
+                android:layout_below="@+id/fv"
+                android:orientation="horizontal"
+                android:divider="#00000000"
+                android:dividerHeight="10dp"
+                android:id="@+id/WritersProfile_bookListWriteByAutors"
+                android:layout_height="wrap_content"></org.lucasr.twowayview.TwoWayView>
+
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+</FrameLayout>

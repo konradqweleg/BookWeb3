@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="NAME_SAVE_FILE_WITH_LOGIN_INFO">dane</string>
+    <string name="NAME_KEY_WITH_SAVE_LOGIN">login</string>
+    <string name="NAME_KEY_WITH_SAVE_PASSWORD">password</string>
+
+</resources>

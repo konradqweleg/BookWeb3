@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content">
+
+    <com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+
+
+        android:background="#eee"
+    android:id="@+id/gga"
+
+        app:corner_radius="6dp">
+
+
+
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/BookWriteByAuthors_imageBook"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dp"
+
+        android:layout_height="180dp"></ImageView>
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_below="@+id/BookWriteByAuthors_imageBook"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_marginLeft="5dp"
+        android:textAlignment="center"
+        android:text="Pan Tadeusz"
+        android:id="@+id/BookWriteByAuthors_nameBook"
+        android:textSize="17sp"
+        android:layout_height="wrap_content"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="26sp"
+        android:id="@+id/BookWriteByAuthors_markBook"
+        android:text="7.23"
+        android:textColor="@color/colorAccent2"
+        android:layout_toEndOf="@+id/BookWriteByAuthors_imageBook"
+        android:layout_below="@+id/BookWriteByAuthors_imageBook"
+        android:layout_height="wrap_content"></TextView>
+
+
+    </com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout>
+    </RelativeLayout>

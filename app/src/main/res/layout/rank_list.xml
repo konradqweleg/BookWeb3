@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_alignParentTop="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/jk"
+    app:shadowAlpha="0.4"
+    app:shadowOffsetX="0"
+    android:background="#efefef"
+    app:shadowOffsetY="3"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:id="@+id/Rank_allLayoutList"
+    android:background="@drawable/search_theme"
+    android:padding="8dp"
+    android:elevation="7dp"
+    android:layout_margin="15dp"
+    android:weightSum="12"
+    android:layout_height="175dp" >
+
+
+    <ImageView
+        android:layout_width="90dp"
+
+
+        android:layout_weight="2"
+        android:layout_marginLeft="10dp"
+
+
+        android:id="@+id/Rank_imageList"
+
+        android:layout_height="175dp"></ImageView>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/Rank_mainTextList"
+            android:layout_marginLeft="5dp"
+            android:paddingRight="40dp"
+            android:text="Książek"
+            android:gravity="center"
+
+            android:textStyle="bold"
+
+            android:textSize="35sp"
+
+
+
+
+
+
+            android:layout_marginTop="56dp"
+
+            android:fontFamily="@font/mu"
+            android:layout_height="60dp"></TextView>
+
+
+
+
+
+
+
+
+</LinearLayout>
+</com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>

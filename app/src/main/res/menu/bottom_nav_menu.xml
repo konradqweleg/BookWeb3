@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/icon_rank"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/icon_database"
+        android:title="Baza" />
+
+    <item
+    android:id="@+id/navigation_home"
+    android:icon="@drawable/ic_icon_maine"
+    android:title="@string/title_notifications" />
+    <item
+        android:id="@+id/navigation_profil"
+        android:icon="@drawable/icon_profil"
+        android:title="Profil" />
+
+    <item
+        android:id="@+id/navigation_favorite"
+        android:icon="@drawable/iicon_adore"
+        android:title="Ulubione" />
+
+
+</menu>

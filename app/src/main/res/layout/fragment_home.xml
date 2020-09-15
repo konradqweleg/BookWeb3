@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#efefef"
+
+    android:layout_height="match_parent">
+
+    <!--
+ android:background="#f9f9f9"
+-->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_marginLeft="13dp"
+    android:layout_marginRight="13dp"
+
+
+
+    android:background="#efefef"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+
+
+    <com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:id="@+id/jk"
+        app:shadowAlpha="0.4"
+        app:shadowOffsetX="0"
+        app:shadowOffsetY="3"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="match_parent"
+            android:background="@drawable/search_theme"
+            android:elevation="5dp"
+
+            android:hint="Szukaj"
+
+
+            android:id="@+id/Home_searchBook"
+
+            android:focusable="false"
+            android:layout_margin="10dp"
+
+
+            android:paddingStart="15dp"
+
+
+
+            android:layout_height="40dp"
+            android:autofillHints=""
+            android:inputType="text"
+            tools:targetApi="o"
+            tools:ignore="RtlSymmetry" />
+
+
+    </com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_alignEnd="@+id/jk"
+        android:src="@drawable/icon_loop"
+        android:paddingEnd="25dp"
+
+
+        android:paddingTop="20dp"
+        android:layout_marginTop="30dp"
+
+        android:background="@null"
+
+        android:layout_height="wrap_content"
+
+        tools:ignore="RtlSymmetry" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Popularne książki"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/jk"
+        android:fontFamily="@font/mu"
+        android:letterSpacing="0.10"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:id="@+id/xxss"
+        ></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Więcej"
+        android:letterSpacing="0.10"
+        android:layout_marginTop="10dp"
+        android:textAlignment="textEnd"
+        android:fontFamily="@font/mu"
+        android:layout_below="@+id/jk"
+        android:layout_alignParentEnd="true"
+
+
+        android:textStyle="bold"
+        android:textColor="#555"
+        android:paddingTop="3.5dp"
+        android:paddingBottom="3.5dp"
+        android:textSize="13sp"
+        android:id="@+id/xxssasd"
+        android:layout_height="wrap_content"></TextView>
+
+
+
+    <org.lucasr.twowayview.TwoWayView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:drawSelectorOnTop="false"
+
+        tools:context=".MainActivity"
+        tools:ignore="RedundantNamespace"
+        android:elevation="3dp"
+        android:layout_below="@+id/xxssasd"
+        android:id="@+id/Home_ListPopularBook"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aktywność znajomych"
+
+        android:layout_below="@+id/Home_ListPopularBook"
+        android:fontFamily="@font/mu"
+        android:letterSpacing="0.10"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:id="@+id/xxssss"
+        ></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Więcej"
+        android:letterSpacing="0.10"
+
+        android:textAlignment="textEnd"
+        android:fontFamily="@font/mu"
+        android:layout_below="@+id/Home_ListPopularBook"
+        android:layout_alignParentEnd="true"
+
+
+        android:textStyle="bold"
+        android:textColor="#555"
+        android:paddingTop="3.5dp"
+        android:paddingBottom="3.5dp"
+        android:textSize="13sp"
+        android:id="@+id/xxssasssd"
+        android:layout_height="wrap_content"></TextView>
+    <org.lucasr.twowayview.TwoWayView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:drawSelectorOnTop="false"
+
+        tools:context=".MainActivity"
+        tools:ignore="RedundantNamespace"
+        android:elevation="3dp"
+        android:layout_below="@+id/xxssasssd"
+        android:id="@+id/Home_ListFriendActivity"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nowości"
+
+        android:layout_below="@+id/Home_ListFriendActivity"
+        android:fontFamily="@font/mu"
+        android:letterSpacing="0.10"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:id="@+id/ee"
+        ></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Więcej"
+        android:letterSpacing="0.10"
+
+        android:textAlignment="textEnd"
+        android:fontFamily="@font/mu"
+        android:layout_below="@+id/Home_ListFriendActivity"
+        android:layout_alignParentEnd="true"
+
+
+        android:textStyle="bold"
+        android:textColor="#555"
+        android:paddingTop="3.5dp"
+        android:paddingBottom="3.5dp"
+        android:textSize="13sp"
+        android:id="@+id/ee2"
+        android:layout_height="wrap_content"></TextView>
+
+    <org.lucasr.twowayview.TwoWayView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:drawSelectorOnTop="false"
+
+        tools:context=".MainActivity"
+        tools:ignore="RedundantNamespace"
+        android:layout_marginBottom="60dp"
+        android:elevation="3dp"
+        android:layout_below="@+id/ee2"
+        android:id="@+id/Home_newBookList"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+
+
+
+
+
+</RelativeLayout>
+</ScrollView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="AUTH_EMAIL_LOGIN_PARAM">username</string>
+    <string name="AUTH_PASSWORD_PARAM">password</string>
+
+    <string name="LOGIN_IF_ACCESS_PARAM">login</string>
+    <string name="EMAIL_IF_ACCESS_PARAM">email</string>
+
+    <string name="LOGIN_REGISTER_PARAM">login</string>
+    <string name="EMAIL_REGISTER_PARAM">email</string>
+    <string name="PASSWORD_REGISTER_PARAM">password</string>
+
+
+</resources>

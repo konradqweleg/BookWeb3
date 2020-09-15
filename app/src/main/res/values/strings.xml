@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">TwojaKsiazka</string>
+    <string name="activity_login_description">Zaloguj się do BookWeb</string>
+    <string name="activity_login_choiceLogin_loginEmail">Zaloguj się przez e-mail</string>
+    <string name="activity_login_choiceLogin_loginGoogle">Zaloguj się przez Google</string>
+    <string name="activity_login_choiceLogin_loginFacebook">Zaloguj się przez Facebook</string>
+    <string name="activity_login_forgotPassword">Zapomniałem hasła</string>
+    <string name="activity_login_registerTextPartOne">Nie masz konta?</string>
+    <string name="activity_login_registerTextPartTwo">Zarejestruj się</string>
+
+
+    <string name="activity_loginEmail_description">Zaloguj się przez adres e-mail</string>
+    <string name="activity_loginEmail_emailDescription">Adres e-mail</string>
+    <string name="activity_loginEmail_passwordDescription">Hasło</string>
+    <string name="activity_loginEmail_login">Zaloguj się</string>
+    <string name="activity_loginEmail_ArrowBackDescription">Strzałka w lewo wraca do menu głównego</string>
+
+
+    <string name="LoginPasswordReset_logoText">Przywracanie hasła</string>
+    <string name="LoginPasswordReset_descriptionPage">Podaj adres e-mail na który zostanie\nwysłany link do przywrócenia hasła</string>
+    <string name="LoginPasswordReset_emailDescription">Adres e-mail</string>
+    <string name="LoginPasswordReset_restorePassword">Przywróc hasło</string>
+
+    <string name="General_showPasswordButton">Pokaż hasło</string>
+
+    <string name="LoginRegister_descriptionLogo">Załóż nowe konto</string>
+    <string name="LoginRegister_descriptionPage">Załóż darmowe konto na BookWeb</string>
+    <string name="LoginRegister_loginDescription">Login</string>
+    <string name="LoginRegister_emailDescription">Adres e-mail</string>
+    <string name="LoginRegister_passwordDescription">Hasło</string>
+    <string name="LoginRegister_repeatPasswordDescription">Powtórz hasło</string>
+    <string name="LoginRegister_passwordHintSignMinRequiment">Przynajmniej 6 znaków</string>
+    <string name="LoginRegister_acceptRules">Tworząc konto akceptujesz Nasz regulamin oraz Politykę prywatności</string>
+    <string name="LoginRegister_createAccount">Załóż konto</string>
+    <string name="Error_Login_EmptyPasswordOrLogin">Pusty e-mail lub hasło</string>
+
+    <string name="Have_Account">Masz już konto?</string>
+    <string name="title_activity_main_app_acivity">MainAppAcivity</string>
+    <string name="title_home">Ranking</string>
+    <string name="title_dashboard">Baza książek</string>
+    <string name="title_notifications">Główna</string>
+
+
+    <string name="RegisterErrorLoginIsBusy">Login jest zajęty</string>
+    <string name="RegisterErrorEmailIsBusy">Email w użyciu</string>
+
+
+    <string name="nameShowMessageSendMail">sendMail</string>
+
+    <string name="fromActivityStartNoInternetActivity">from</string>
+
+    <string name="Error_LogiIsTooShort">Login jest za krótki</string>
+    <string name="Error_LoginIsEmpty">Login jest pusty</string>
+
+    <string name="Error_BadFormatMail">Zły format meilu</string>
+    <string name="Error_EmptyMail">Pusty e-mail</string>
+    <string name="Error_PasswordIsToShort">Hasło jest za krótkie</string>
+    <string name="Error_PasswordIsEmpty">Hasło jest puste</string>
+    <string name="Error_PasswordAreDiffrent">Hasłą są różne</string>
+    <string name="rulescreateAccountPartOne">Tworząc konto akceptujesz nasz</string>
+    <string name="rulescreateAccountPartTwo">Regulamin</string>
+    <string name="rulescreateAccountPartThree">Oraz</string>
+    <string name="rulescreateAccountPartFour">Politykę prywatności</string>
+    <string name="activeLinkAccountSend">Link do aktywacji konta został wysłany na podany mail</string>
+
+    <string name="accountCreated">Konto zostało utworzone</string>
+
+    <string name="Error_AccoundNotExist">Podane konto nie istnieję</string>
+
+    <string name="sendLinkChangePassword">Wysłano link zmiany hasła na podany mail</string>
+    <string name="newPassword">Nowe hasło</string>
+    <string name="writeNewPassword">Wpisz nowe hasło</string>
+    <string name="repeatPassword">Powtórz hasło</string>
+    <string name="changePassword">Zmień hasło</string>
+    <string name="emptyFieldPassword">Puste pole hasła</string>
+    <string name="tooShortPassword">Hasło jest za krótkie</string>
+
+    <string name="changedPassword">Zmieniono hasło</string>
+    <string name="search">Szukaj...</string>
+    <string name="popular">Popularne</string>
+    <string name="more">więcej</string>
+    <string name="more_popular_image_description">Więcej popularnych ksiązek przycisk</string>
+    <string name="search_icon">Ikona wyszukiwania</string>
+    <string name="List_imageBook">Obrazek książki</string>
+
+    <string name="mark">Ocena</string>
+    <string name="maxMark">10</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bookFragmentLabel">bookFragment</string>
+    <string name="Your_Mark_markBook">Oceń książke !</string>
+    <string name="YourMark_whatDoYouThinkAboutBook">Napisz co myślisz</string>
+    <string name="YourMark_markBookButton">Oceń ksiażke</string>
+    <string name="VotedBook_youMark">Twoja ocena</string>
+    <string name="VotedBook_changeMark">Zmień ocenę</string>
+    <string name="Book_returnToMenu">Powróc do menu</string>
+    <string name="Book_addToFavorite">Dodaj do ulubionych</string>
+    <string name="Book_bookImageDescription">Zdjęcie książki</string>
+    <string name="Book_mark">Ocena:</string>
+    <string name="Book_howManyPageText">Liczba stron:</string>
+    <string name="Book_yearPublishText">Rok wydania:</string>
+    <string name="Book_bookDescriptionText">Opis książki</string>
+    <string name="Book_usersMarks">Oceny</string>
+    <string name="Book_yourOpinionAndMark">Twoja ocena</string>
+
+    <string name="UserMark_1">Beznadziejna -1-</string>
+    <string name="UserMark_2">Słaba -2-</string>
+    <string name="UserMark_3">Bardzo słaba -3-</string>
+    <string name="UserMark_4">Może być -4-</string>
+    <string name="UserMark_5">Przeciętna -5-</string>
+    <string name="UserMark_6">Dobra -6- </string>
+    <string name="UserMark_7">Bardzo dobra -7-</string>
+    <string name="UserMark_8">Rewelacyjna -8-</string>
+    <string name="UserMark_9">Wybitna -9-</string>
+    <string name="UserMark_10">Arcydzieło -10-</string>
+    <string name="findBook">Szukaj książek fragment</string>
+
+
+    <string name="sendActivationMail">Wysłano maila aktywującego konto</string>
+    <string name="remove_mark">Usuń ocenę</string>
+
+    <string name="facebook_app_id">292703361782596</string>
+    <string name="fb_login_protocol_scheme">fb292703361782596</string>
+
+</resources>

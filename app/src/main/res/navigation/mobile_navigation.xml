@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_profil"
+        android:name="project.legto.twojaksiazka3.ui.profil.ProfilFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_profil" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="project.legto.twojaksiazka3.ui.databaseBooks.DatabaseBookFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_database_book_list_category" />
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="project.legto.twojaksiazka3.ui.home.HomeFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="project.legto.twojaksiazka3.ui.rank.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_favorite"
+        android:name="project.legto.twojaksiazka3.ui.favorite.FavoriteFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/favorite_fragment" />
+
+    <fragment
+        android:id="@+id/bookFragment"
+        android:name="project.legto.twojaksiazka3.ui.bookShow.BookFragment"
+        android:label="@string/bookFragmentLabel"
+        tools:layout="@layout/fragment_book" />
+
+
+    <fragment
+        android:id="@+id/FindPanelBookFragment"
+        android:name="project.legto.twojaksiazka3.findBook.FindPanelBookFragment"
+        android:label="@string/findBook"
+        tools:layout="@layout/fragment_find_panel_book" />
+
+
+    <fragment
+        android:id="@+id/ShowBookWithOneCategory"
+        android:name="project.legto.twojaksiazka3.ui.databaseBooks.ShowBookWithOneCategory"
+        android:label="Pokaż ksiazki z kategorii"
+        tools:layout="@layout/fragment_show_book_with_one_category" >
+        <action
+            android:id="@+id/confirmationAction"
+            app:destination="@+id/FilterBookSettings"
+            app:enterAnim="@anim/slide_from_right_to_50"
+            app:exitAnim="@anim/slide_from_right_to_50"
+
+            />
+
+
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/FilterBookSettings"
+        android:name="project.legto.twojaksiazka3.ui.databaseBooks.FilterShowBookInDatabaseBookLayout"
+        android:label="Szukaj ksiązek z kategorii z filtrem"
+        tools:layout="@layout/fragment_filter_show_book_in_database_book_layout" >
+
+
+
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/readsBook"
+        android:name="project.legto.twojaksiazka3.ui.profil.readsBook"
+        android:label="przeczytane ksiażki"
+        tools:layout="@layout/fragment_reads_book" >
+
+
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/rankBook"
+        android:name="project.legto.twojaksiazka3.ui.rank.Rank_book"
+        android:label="ranking książek"
+        tools:layout="@layout/fragment_rank_book" >
+
+
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/rankAuthors"
+        android:name="project.legto.twojaksiazka3.ui.rank.RankAuthors"
+        android:label="ranking PISARZY"
+        tools:layout="@layout/fragment_rank_authors" >
+
+
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/writersProfile"
+        android:name="project.legto.twojaksiazka3.ui.WritersProfile.WritersProfile"
+        android:label="profil pisarza"
+        tools:layout="@layout/fragment_writers_profile" >
+
+
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/friendsProfile"
+        android:name="project.legto.twojaksiazka3.ui.favorite.FriendsProfile"
+        android:label="profil znajomego"
+        tools:layout="@layout/fragment_friends_profile" >
+
+
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/friendsProfileReadBooks"
+        android:name="project.legto.twojaksiazka3.ui.favorite.ReadBookByFriend"
+        android:label="przeczytane ksiażki przezznajomego"
+        tools:layout="@layout/fragment_read_book_by_friend" >
+
+
+
+
+    </fragment>
+
+
+</navigation>

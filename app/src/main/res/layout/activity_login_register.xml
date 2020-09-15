@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+
+    tools:context=".login.RegisterActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/LoginRegister_layout"
+
+            android:layout_height="match_parent"
+            tools:ignore="ScrollViewSize">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="85dp"
+                android:id="@+id/LoginRegister_descriptionLogo"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="23dp"
+                android:layout_alignParentTop="true"
+                android:fontFamily="@font/roboto_bold"
+
+
+
+                android:text="@string/LoginRegister_descriptionLogo"
+                android:textColor="#2D2C2B"
+                android:textSize="30sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/LoginRegister_descriptionPage"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LoginRegister_descriptionLogo"
+                android:layout_alignStart="@+id/LoginRegister_descriptionLogo"
+
+
+                android:layout_marginTop="-5dp"
+                android:fontFamily="@font/roboto"
+                android:text="@string/LoginRegister_descriptionPage"
+                android:textSize="16sp">
+
+            </TextView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/roboto_bold"
+                android:layout_alignStart="@+id/LoginRegister_descriptionLogo"
+                android:layout_below="@+id/LoginRegister_descriptionPage"
+
+                android:text="@string/LoginRegister_loginDescription"
+                android:textColor="#2D2C2B"
+                android:id="@+id/LoginRegister_loginDescription"
+                android:layout_marginTop="30dp"
+                android:textSize="16sp">
+
+            </TextView>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/LoginRegister_inputLoginFrame"
+                android:layout_alignStart="@+id/LoginRegister_descriptionLogo"
+                android:layout_below="@+id/LoginRegister_loginDescription"
+                android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/LoginRegister_inputLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input_background"
+                android:saveEnabled="true"
+                android:maxLength="30"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:fontFamily="@font/roboto_thin"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                tools:ignore="Autofill,LabelFor">
+
+            </EditText>
+                <EditText
+                    android:id="@+id/LoginRegister_inputLoginRed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/red_input_background"
+                    android:fontFamily="@font/roboto_bold"
+                    android:maxLength="30"
+                    android:layout_gravity="center"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:singleLine="true"
+                    android:visibility="gone"
+
+                    android:textAllCaps="false"
+                    android:textColor="#000"
+                    tools:ignore="Autofill,LabelFor">
+
+                </EditText>
+
+            </FrameLayout>
+            <TextView
+                android:id="@+id/LoginRegister_loginErrorMessage"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="20dp"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LoginRegister_inputLoginFrame"
+                android:layout_alignStart="@+id/LoginRegister_descriptionLogo"
+                android:textColor="#FF523A"
+android:visibility="gone"
+
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/roboto"
+
+                android:textSize="16sp">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/roboto_bold"
+                android:layout_alignStart="@+id/LoginRegister_loginDescription"
+                android:layout_below="@+id/LoginRegister_loginErrorMessage"
+
+                android:text="@string/LoginRegister_emailDescription"
+                android:textColor="#2D2C2B"
+                android:id="@+id/LoginRegister_emailDescription"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp">
+
+            </TextView>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+
+                android:layout_marginEnd="20dp"
+                android:id="@+id/LoginRegister_emailFrame"
+                android:layout_alignStart="@+id/LoginRegister_descriptionLogo"
+                android:layout_below="@+id/LoginRegister_emailDescription"
+                android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/LoginRegister_inputEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_thin"
+
+                android:background="@drawable/input_background"
+
+
+                android:maxLength="30"
+                android:inputType="textEmailAddress"
+
+                android:maxLines="1"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                tools:ignore="Autofill,LabelFor">
+
+            </EditText>
+                <EditText
+                    android:id="@+id/LoginRegister_inputEmailRed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:background="@drawable/red_input_background"
+                    android:fontFamily="@font/roboto_bold"
+                    android:layout_gravity="center"
+                    android:maxLength="30"
+                    android:inputType="textEmailAddress"
+                    android:visibility="gone"
+                    android:maxLines="1"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:singleLine="true"
+
+                    android:textAllCaps="false"
+                    android:textColor="#000"
+                    tools:ignore="Autofill,LabelFor">
+
+                </EditText>
+            </FrameLayout>
+            <TextView
+                android:id="@+id/LoginRegister_emailErrorMessage"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="20dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LoginRegister_emailFrame"
+                android:layout_alignStart="@+id/LoginRegister_descriptionLogo"
+                android:textColor="#FF523A"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/roboto"
+                android:text="@string/LoginRegister_descriptionPage"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/roboto_bold"
+                android:layout_alignStart="@+id/LoginRegister_descriptionLogo"
+                android:layout_below="@+id/LoginRegister_emailErrorMessage"
+
+                android:text="@string/LoginRegister_passwordDescription"
+                android:textColor="#2D2C2B"
+                android:id="@+id/LoginRegister_passwordDescription"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp">
+
+            </TextView>
+
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_alignStart="@id/LoginRegister_emailFrame"
+    android:layout_alignEnd="@+id/LoginRegister_emailFrame"
+    android:layout_below="@+id/LoginRegister_passwordDescription"
+    android:id="@+id/LoginRegister_inputPasswordFrame"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/LoginRegister_inputPassword"
+                android:fontFamily="@font/roboto_thin"
+
+                android:maxLength="30"
+                android:inputType="textPassword"
+
+                android:maxLines="1"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="#000"
+
+                android:background="@drawable/input_background"
+
+                android:layout_height="wrap_content"
+
+                android:hint="@string/LoginRegister_passwordHintSignMinRequiment"
+                tools:ignore="Autofill" />
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/LoginRegister_inputPasswordRed"
+            android:fontFamily="@font/roboto_bold"
+
+            android:maxLength="30"
+            android:inputType="textPassword"
+
+            android:maxLines="1"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="#000"
+            android:visibility="gone"
+            android:background="@drawable/red_input_background"
+
+            android:layout_height="wrap_content"
+
+
+            tools:ignore="Autofill,LabelFor" />
+
+            <ImageButton
+                android:id="@+id/LoginRegister_showPassword"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:focusable="false"
+                android:layout_alignEnd="@+id/LoginRegister_inputPassword"
+                android:src="@drawable/hide_password"
+                android:layout_alignTop="@+id/LoginRegister_inputPassword"
+
+                android:background="@null"
+                android:layout_centerVertical="true"
+
+                android:contentDescription="@string/General_showPasswordButton" />
+    </RelativeLayout>
+</FrameLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/roboto_bold"
+                android:layout_alignStart="@+id/LoginRegister_descriptionLogo"
+                android:layout_below="@+id/LoginRegister_inputPasswordFrame"
+
+                android:text="@string/LoginRegister_repeatPasswordDescription"
+                android:textColor="#2D2C2B"
+                android:id="@+id/LoginRegister_repeatPasswordDescription"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp">
+
+            </TextView>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+
+                android:layout_marginEnd="20dp"
+                android:id="@+id/LoginRegister_inputPasswordRepeatFrame"
+                android:layout_alignStart="@+id/LoginRegister_descriptionLogo"
+                android:layout_below="@+id/LoginRegister_repeatPasswordDescription"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/LoginRegister_inputRepeatPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:background="@drawable/input_background"
+
+
+                android:maxLength="30"
+                android:inputType="textPassword"
+
+                android:maxLines="1"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:fontFamily="@font/roboto_thin"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                tools:ignore="Autofill,LabelFor">
+
+            </EditText>
+                    <EditText
+                        android:id="@+id/LoginRegister_inputRepeatPasswordRed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        android:background="@drawable/red_input_background"
+                        android:fontFamily="@font/roboto_bold"
+
+                        android:maxLength="30"
+                        android:inputType="textPassword"
+                        android:visibility="gone"
+                        android:maxLines="1"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:singleLine="true"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="false"
+                        android:textColor="#000"
+                        tools:ignore="Autofill,LabelFor">
+
+                    </EditText>
+
+            <ImageButton
+                android:id="@+id/LoginRegister_showPasswordRepeat"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_alignEnd="@+id/LoginRegister_inputRepeatPassword"
+                android:src="@drawable/hide_password"
+                android:layout_alignTop="@+id/LoginRegister_inputRepeatPassword"
+                android:focusable="false"
+                android:background="@null"
+                android:layout_centerVertical="true"
+
+                android:contentDescription="@string/General_showPasswordButton" />
+                </RelativeLayout>
+            </FrameLayout>
+            <TextView
+                android:id="@+id/LoginRegister_passwordErrorMessage"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="20dp"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/LoginRegister_inputPasswordRepeatFrame"
+                android:layout_alignStart="@+id/LoginRegister_descriptionLogo"
+                android:textColor="#FF523A"
+
+                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/roboto"
+                android:text="@string/LoginRegister_descriptionPage"
+                android:textSize="16sp">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/LoginRegister_arrowLeft"
+                android:layout_width="70dp"
+                android:layout_marginTop="-8dp"
+                android:paddingTop="18dp"
+                android:layout_marginEnd="-22dp"
+                android:paddingBottom="27dp"
+
+                android:layout_height="70dp"
+
+
+                android:layout_gravity="bottom"
+
+                android:layout_marginStart="1dp"
+                android:layout_alignEnd="@+id/LoginRegister_emailFrame"
+
+
+                android:layout_alignTop="@+id/LoginRegister_descriptionLogo"
+                android:src="@drawable/arrow_left"
+                android:contentDescription="@string/activity_loginEmail_ArrowBackDescription" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/LoginRegister_acceptRules"
+                android:layout_gravity="center"
+                android:layout_below="@+id/LoginRegister_passwordErrorMessage"
+                android:layout_alignStart="@+id/LoginRegister_repeatPasswordDescription"
+                android:layout_alignEnd="@id/LoginRegister_emailFrame"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="#B0ADA9"
+                android:text="@string/LoginRegister_acceptRules"
+                android:textSize="14sp">
+
+            </TextView>
+
+
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_alignStart="@+id/LoginRegister_inputPasswordFrame"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/LoginRegister_registerButton"
+                android:background="@drawable/main_button_background"
+                android:layout_below="@+id/LoginRegister_acceptRules"
+                android:fontFamily="@font/roboto_bold"
+                android:text="@string/LoginRegister_createAccount"
+                android:textAllCaps="false"
+                android:layout_marginBottom="30dp"
+                android:textColor="#fff">
+
+            </Button>
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
+

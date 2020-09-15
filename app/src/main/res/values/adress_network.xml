@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="IF_INTERNET_ACCESS_ADRESS">https://sport.onet.pl/</string>
+    <string name="AUTHORIZATION_USER_ADRESS">http://192.168.55.113:3000/auth</string>
+    <string name="CHECK_AVAILABILITY_LOGIN_EMAIL_ADRESS">http://192.168.55.113:3000/checkAvailableEmailAndLogin</string>
+    <string name="REGISTER_USER_ADRESS">http://192.168.55.113:3000/registerUser</string>
+    <string name="VERIFY_ACCOUNT_ADRESS">http://192.168.55.113:3000/registerUserCodeVerify</string>
+    <string name="CHECK_EMAIL_EXIST_IN_DATABASE_ADRESS">http://192.168.55.113:3000/checkIfAccountExsistAndSendOnMailResetPasswordCode</string>
+    <string name="CHANGE_PASSWORD_ADRESS">http://192.168.55.113:3000/changePassword</string>
+    <string name="GIVE_POPULAR_BOOK_ADRESS">http://192.168.55.113:3000/givePopularBook</string>
+    <string name="GIVE_IMAGE_BOOK_ADRESS">http://192.168.55.113:3000/getImageBook?numberBook=</string>
+    <string name="HOW_MANY_COMMENT_BOOK_ADRESS">http://192.168.55.113:3000/HowManyBookAboutId?idBook=</string>
+    <string name="GET_COMMENTS_BOOKS_ADRESS">http://192.168.55.113:3000/getCommentBook</string>
+    <string name="IF_USER_VOTED_BOOK_ADRESS">http://192.168.55.113:3000/ifUserVotedBook</string>
+    <string name="USER_BOOK_MARK_ADRESS">http://192.168.55.113:3000/returnUserBookMark</string>
+    <string name="MARK_BOOK_ADRESS">"http://192.168.55.113:3000/markBook"</string>
+    <string name="USER_MARK_STATISTICS_ADRESS">"http://192.168.55.113:3000/getUsersMarkStatistics"</string>
+    <string name="FIND_BOOK_LIST_ADRESS">"http://192.168.55.113:3000/returnBookWithNameFilter"</string>
+    <string name="HOW_MANY_BOOKS_IN_CATEGORY_ADRESS">http://192.168.55.113:3000/howManyBookWithOneCategory?category=</string>
+    <string name="GET_BOOK_WITH_ONE_CATEGORY_LIST_ELEM_NUMBER_ADRESS">http://192.168.55.113:3000/getBookWithOneCategory</string>
+    <string name="REMOVE_MARK_BOOK_ADRESS">http://192.168.55.113:3000/deleteYoursMarkBook</string>
+    <string name="SEARCH_BOOK_ADRESS">http://192.168.55.113:3000/giveSearchBook</string>
+    <string name="GIVE_BOOK_ONE_CATEGORY_CHOICE_ADRESS">http://192.168.55.113:3000/giveBookWithOneCategory</string>
+    <string name="FIND_BOOK_HOW_MANY">http://192.168.55.113:3000/findBookHow</string>
+    <string name="HOW_MANY_READ_BOOKS_USER_ADRESS">http://192.168.55.113:3000/howManyBookReaduser?idUser=</string>
+    <string name="READ_BOOK_LIST_ABOUT_POSITON_ADRESS">http://192.168.55.113:3000/getBookWhichUserRead</string>
+    <string name="USER_STATISTICS_ADRESS">http://192.168.55.113:3000/getUserDataSettings</string>
+    <string name="USER_IMAGE_ADRESS">http://192.168.55.113:3000/getUserImageProfile?idUser=</string>
+    <string name="SHOW_BOOK_WITH_USER_READ_FROM_LISTREADS_ADRESS">http://192.168.55.113:3000/giveBookWithOneUserRead</string>
+    <string name="HOW_MANY_BOOK_WITH_FILTER_SHOW_ADRESS">http://192.168.55.113:3000/howManyBookWithOneCategoryFilter?category=</string>
+    <string name="GET_BOOK_WITH_FILTER">http://192.168.55.113:3000/getBookWithOneCategoryWithFilter</string>
+    <string name="GET_TOP_BOOK_ADRESS">http://192.168.55.113:3000/getTopBook</string>
+    <string name="GET_DATA_RANK_BOOK_ADRESS">http://192.168.55.113:3000/giveTopBook</string>
+    <string name="GET_DATA_RANK_WRITERS_ADRESS">http://192.168.55.113:3000/getTopRankWriters</string>
+    <string name="GET_WRITERS_IMAGE">http://192.168.55.113:3000/getWritersImage?idAuthors=</string>
+    <string name="GET_WRITERS_DATA">http://192.168.55.113:3000/returnDataWritersAboutId</string>
+    <string name="GET_WRITE_BOOK_BY_AUTHORS">http://192.168.55.113:3000/getWriteBookByAuthors</string>
+    <string name="GET_BOOK_ABOUT_ID">http://192.168.55.113:3000/getBookAboutId</string>
+    <string name="GET_WRITERS_WITH_FILTER_NAME_ADRESS">http://192.168.55.113:3000/findWritersNameLikeToWord</string>
+    <string name="GET_WRITERS_WITH_FILTER_NAME_SIZE">http://192.168.55.113:3000/getWritersAboutFilterSize</string>
+    <string name="REGISTER_USER_VIA_FB">http://192.168.55.113:3000/addUserToDatabaseViaFacebook</string>
+    <string name="USER_ID_FROM_FB_ID_ADRESS">http://192.168.55.113:3000/getIdUserFromFacebookId</string>
+    <string name="USER_ID_FROM_EMAIL">http://192.168.55.113:3000/getIdUserFromEmail</string>
+    <string name="HOW_MANY_READ_BOOKS_FRIEND_QUERY">http://192.168.55.113:3000/howManyReadBookFriends</string>
+    <string name="POSITION_RANK_FB_FRIENDS_QUERY">http://192.168.55.113:3000/getPositionFriendFromFbInRank</string>
+    <string name="GET_USER_FRIEND_DATA_SETTINGS_QUERY">http://192.168.55.113:3000/getUserFriendsDataSettings</string>
+    <string name="FRIEND_READ_BOOKS_ADRESS">http://192.168.55.113:3000/getBookWithFriendRead</string>
+    <string name="GET_SIZE_BOOK_READ_BY_FRIEND">http://192.168.55.113:3000/getSizeReadBooksByFriend</string>
+    <string name="GET_LAST_ACTIVITY_FRIENDa_DRESS">http://192.168.55.113:3000/returnLastActivityUserAbaouFbId</string>
+
+</resources>

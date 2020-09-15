@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:paddingBottom="7dp"
+    android:paddingTop="7dp"
+
+
+
+
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:id="@+id/OneCategoryBook_image"
+        android:layout_height="80dp">
+
+    </ImageView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_toEndOf="@+id/OneCategoryBook_image"
+        android:text="Pacjent Zero"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginTop="0dp"
+        android:id="@+id/OneCategoryBook_title"
+        android:textSize="25sp"
+        android:fontFamily="@font/mu"
+
+        android:paddingTop="3dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_toEndOf="@+id/OneCategoryBook_image"
+        android:text="Adam Mickiewicz"
+        android:padding="3dp"
+        android:fontFamily="@font/mu"
+        android:id="@+id/OneCategoryBook_author"
+        android:layout_below="@+id/OneCategoryBook_title"
+        android:layout_height="wrap_content">
+
+    </TextView>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:background="@drawable/ic_heart_icon"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="23dp"
+        android:layout_height="wrap_content"></ImageView>
+
+</RelativeLayout>

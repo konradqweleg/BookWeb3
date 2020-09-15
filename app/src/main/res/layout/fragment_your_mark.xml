@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+
+    tools:context=".ui.bookShow.YourMark">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:id="@+id/YourMark_subjectMarkBook"
+
+        android:text="@string/Your_Mark_markBook"
+        android:layout_height="wrap_content" />
+
+
+    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+        android:id="@+id/YourMark_ratingBook"
+        style="@style/Widget.MaterialRatingBar.RatingBar"
+        android:isIndicator="false"
+        android:layout_below="@+id/YourMark_subjectMarkBook"
+        android:rating="6"
+
+        android:stepSize="1.0"
+        android:numStars="10"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/YourMark_ratingBook"
+        android:layout_marginTop="4dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:id="@+id/YourMark_descriptionYourMark"
+        android:textSize="16sp"
+        android:text="Niezła -6-"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:inputType="text|textMultiLine"
+        android:layout_below="@+id/YourMark_descriptionYourMark"
+        android:id="@+id/VotedBook_opinionAboutBook"
+        android:hint="@string/YourMark_whatDoYouThinkAboutBook"
+        android:textAlignment="center"
+        android:layout_height="160dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_below="@+id/VotedBook_opinionAboutBook"
+        android:background="@drawable/main_button_background"
+        android:layout_marginTop="10dp"
+        android:text="@string/YourMark_markBookButton"
+        android:id="@+id/YourMark_giveMarkToBookButton"
+        android:textColor="#fff"
+        android:textAllCaps="false"
+
+        android:textSize="22sp"
+        android:layout_height="wrap_content">
+
+    </Button>
+
+
+</RelativeLayout>

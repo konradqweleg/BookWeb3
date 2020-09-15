@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginTop="20dp"
+    android:layout_height="match_parent"
+    tools:context=".findBook.FindBookActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:background="@drawable/theme3"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/FindBook_searchEditText"
+        android:layout_marginTop="0dp"
+        android:hint="@string/search"
+        android:paddingStart="15dp"
+        android:fontFamily="@font/roboto"
+        android:layout_marginRight="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:inputType="text"
+        tools:targetApi="o"
+        tools:ignore="RtlSymmetry" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_alignEnd="@+id/FindBook_searchEditText"
+        android:paddingEnd="15dp"
+        android:paddingTop="15dp"
+        android:background="@null"
+        android:src="@drawable/icon_loop"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/search_icon"
+        tools:ignore="RtlSymmetry" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="-50dp"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@+id/FindBook_searchEditText"
+        android:src="@drawable/x_icon"
+        android:layout_height="wrap_content"></ImageView>
+
+</RelativeLayout>

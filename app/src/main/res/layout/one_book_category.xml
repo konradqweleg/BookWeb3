@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="#efefef"
+
+    android:layout_alignParentTop="true"
+
+    android:id="@+id/jk"
+    app:shadowAlpha="0.4"
+    app:shadowOffsetX="0"
+    app:shadowOffsetY="3"
+    android:layout_height="wrap_content">
+<LinearLayout
+android:id="@+id/OneCategory_color"
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:elevation="5dp"
+    android:background="@drawable/search_theme"
+    android:weightSum="12"
+
+    android:layout_height="150dp" >
+
+
+<ImageView
+    android:layout_width="90dp"
+
+
+    android:layout_weight="2"
+android:layout_marginLeft="10dp"
+
+
+    android:id="@+id/OneCategory_image"
+
+    android:layout_height="140dp"></ImageView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_weight="10"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/OneCategory_Name"
+            android:layout_marginLeft="5dp"
+            android:textColor="#000"
+            android:text="Klasyka"
+
+            android:gravity="center"
+            android:textStyle="bold"
+
+            android:textSize="30sp"
+
+
+
+
+
+            android:layout_marginTop="37dp"
+
+            android:fontFamily="@font/mu"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_below="@+id/OneCategory_Name"
+            android:layout_marginTop="2dp"
+            android:textColor="#ffa500"
+            android:fontFamily="@font/mu"
+            android:text="Nesbo  Lovecraft  Poe"
+            android:id="@+id/OneCategory_PopularAuthor"
+            android:textAlignment="center"
+            android:layout_height="wrap_content">
+
+        </TextView>
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>
+</com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>
