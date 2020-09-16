@@ -2,9 +2,11 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingTop="20dp"
     android:layout_height="match_parent"
-    android:background="@drawable/searchtheme2"
+
+    android:background="#efefef"
     tools:context=".ui.bookShow.BookFragment">
 
 
@@ -47,170 +49,207 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_marginBottom="60dp"
+
             android:id="@+id/Book_relLayout"
             android:layout_height="wrap_content">
+            <com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper
+                android:layout_width="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
 
-
-            <ImageView
-                android:layout_width="140dp"
-                android:id="@+id/Book_photoBook"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/tadekd"
-                android:layout_height="180dp"
-                android:contentDescription="@string/Book_bookImageDescription" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="@string/Book_mark"
-                android:layout_toEndOf="@+id/Book_photoBook"
-                android:textColor="#000"
-                android:textSize="20sp"
-                android:fontFamily="@font/mu"
-                android:id="@+id/Book_markText"
-                android:layout_marginTop="10dp"
-                android:layout_below="@+id/Book_authorsBook"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="(39 ocen)"
-                android:id="@+id/Book_howManyMarks"
-                android:fontFamily="@font/mu"
-                android:layout_marginBottom="10dp"
-                android:layout_below="@+id/Book_authorsBook"
-                android:layout_marginTop="15dp"
-                android:layout_marginStart="3dp"
-                android:layout_toEndOf="@+id/Book_userBookMark"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="5,5"
-                android:layout_marginBottom="10dp"
-                android:id="@+id/Book_userBookMark"
-                android:layout_below="@+id/Book_authorsBook"
-                android:fontFamily="@font/mu"
-                android:layout_toEndOf="@+id/Book_markText"
-                android:textSize="20sp"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="1dp"
-                android:textColor="@color/colorAccent"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:textStyle="bold"
-                android:text="Pan Tadeusz"
-                android:textSize="25sp"
-                android:layout_marginTop="8dp"
-
-                android:id="@+id/Book_bookTitle"
-                android:fontFamily="@font/mu"
-                android:layout_toEndOf="@+id/Book_photoBook"
-                android:textColor="#000"
-
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_below="@+id/Book_bookTitle"
-                android:layout_toEndOf="@+id/Book_photoBook"
-                android:textSize="18sp"
-                android:fontFamily="@font/mu"
-                android:id="@+id/Book_authorsBook"
-                android:layout_marginTop="5dp"
-                android:text="Adam Mickiewicz"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_below="@+id/Book_authorsBook"
-                android:layout_toEndOf="@+id/Book_photoBook"
-                android:text=""
-                android:textSize="50sp"
-                android:fontFamily="@font/mu"
-                android:textColor="@color/colorAccent"
+                android:id="@+id/hg"
+                app:shadowAlpha="0.4"
+               android:layout_margin="20dp"
+                app:shadowOffsetX="0"
+                app:shadowOffsetY="3"
                 android:layout_height="wrap_content">
 
-            </TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_toEndOf="@+id/Book_howManyPageInBookText"
-                android:text="296"
-                android:id="@+id/Book_pageInBook"
-                android:layout_above="@+id/Book_yearsPublishText"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="10dp"
-                android:textStyle="bold"
-                android:fontFamily="@font/mu"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_toEndOf="@+id/Book_photoBook"
-                android:layout_above="@+id/Book_yearsPublishText"
-                android:id="@+id/Book_howManyPageInBookText"
-                android:text="@string/Book_howManyPageText"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/mu"
-                android:layout_height="wrap_content" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:paddingBottom="30dp"
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_toEndOf="@+id/Book_photoBook"
-                android:layout_above="@+id/Book_gentreBook_1"
-                android:id="@+id/Book_yearsPublishText"
-                android:layout_marginBottom="15dp"
-                android:fontFamily="@font/mu"
-                android:text="@string/Book_yearPublishText"
-                android:layout_height="wrap_content" />
+                    android:background="@drawable/search_theme"
+                    android:elevation="5dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_toEndOf="@+id/Book_yearsPublishText"
-                android:layout_marginBottom="15dp"
-                android:id="@+id/Book_yearPublish"
-                android:textStyle="bold"
-                android:text="1834"
-                android:fontFamily="@font/mu"
-                android:layout_above="@+id/Book_gentreBook_1"
-                android:layout_height="wrap_content" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="Klasyka"
-                android:textColor="@color/colorAccent2"
-                android:id="@+id/Book_gentreBook_1"
-                android:background="@drawable/gray_theme"
-                android:layout_toEndOf="@+id/Book_photoBook"
-                android:fontFamily="@font/mu"
-                android:layout_alignBottom="@+id/Book_photoBook"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="Klasyka"
-                android:fontFamily="@font/mu"
-                android:textColor="@color/colorAccent2"
-                android:id="@+id/Book_gentreBook_2"
-                android:background="@drawable/gray_theme"
-                android:layout_marginLeft="5dp"
-                android:layout_toEndOf="@+id/Book_gentreBook_1"
-                android:layout_alignBottom="@+id/Book_photoBook"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="Klasyka"
-                android:fontFamily="@font/mu"
-                android:textColor="@color/colorAccent2"
-                android:id="@+id/Book_gentreBook_3"
-                android:background="@drawable/gray_theme"
-                android:layout_marginLeft="5dp"
-                android:layout_toEndOf="@+id/Book_gentreBook_2"
-                android:layout_alignBottom="@+id/Book_photoBook"
-                android:layout_height="wrap_content" />
+                    <ImageView
+                        android:id="@+id/Book_photoBook"
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginTop="16dp"
+                        android:contentDescription="@string/Book_bookImageDescription"
+                        android:padding="6dp"
+                        android:src="@drawable/tadekd" />
 
+                    <TextView
+                        android:id="@+id/Book_markText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Book_yearPublish"
+                        android:layout_toEndOf="@+id/Book_photoBook"
+                        android:fontFamily="@font/monte"
+                        android:text="Ocena - "
+
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/Book_howManyMarks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Book_yearPublish"
+                        android:layout_marginStart="3dp"
+                        android:layout_marginBottom="10dp"
+
+                        android:layout_toEndOf="@+id/YourMark_ratingBook"
+                        android:fontFamily="@font/mu"
+                        android:text="(39 ocen)" />
+
+                    <TextView
+                        android:id="@+id/Book_userBookMark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Book_yearPublish"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@+id/Book_markText"
+                        android:fontFamily="@font/mu"
+
+                        android:text="5,5"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="13sp" />
+
+                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:id="@+id/YourMark_ratingBook"
+                        style="@style/Widget.MaterialRatingBar.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_below="@+id/Book_yearPublish"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/Book_userBookMark"
+
+                        android:isIndicator="false"
+                        android:numStars="1"
+                        android:rating="6"
+
+
+                        android:stepSize="1.0"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:id="@+id/Book_bookTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18.6dp"
+                        android:layout_toEndOf="@+id/Book_photoBook"
+
+                        android:fontFamily="@font/monte"
+                        android:text="Pan Tadeusz"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/Book_authorsBook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Book_bookTitle"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@+id/Book_photoBook"
+                        android:fontFamily="@font/monte"
+                        android:text="Adam Mickiewicz"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Book_authorsBook"
+                        android:layout_toEndOf="@+id/Book_photoBook"
+                        android:fontFamily="@font/mu"
+                        android:text=""
+                        android:textColor="@color/colorAccent"
+                        android:textSize="50sp">
+
+                    </TextView>
+
+
+                    <TextView
+                        android:id="@+id/Book_pageInBook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/YourMark_ratingBook"
+
+                        android:layout_toEndOf="@+id/Book_photoBook"
+                        android:fontFamily="@font/mu"
+                        android:text="@string/Book_howManyPageText" />
+
+
+                    <TextView
+                        android:id="@+id/Book_yearPublish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Book_authorsBook"
+
+
+                        android:layout_toEndOf="@+id/Book_photoBook"
+                        android:fontFamily="@font/monte"
+                        android:text="Rok wydania - 1933"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/Book_gentreBook_1"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/Book_photoBook"
+                        android:layout_toEndOf="@+id/Book_photoBook"
+
+                        android:background="@drawable/gray_theme"
+                        android:fontFamily="@font/mu"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="Klasyka"
+                        android:textColor="@color/colorAccent2" />
+
+                    <TextView
+                        android:id="@+id/Book_gentreBook_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/Book_photoBook"
+                        android:layout_marginLeft="5dp"
+
+                        android:layout_toEndOf="@+id/Book_gentreBook_1"
+                        android:background="@drawable/gray_theme"
+                        android:fontFamily="@font/mu"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="Klasyka"
+                        android:textColor="@color/colorAccent2" />
+
+                    <TextView
+                        android:id="@+id/Book_gentreBook_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Book_gentreBook_2"
+                        android:layout_marginTop="10dp"
+                        android:layout_toEndOf="@+id/Book_photoBook"
+
+                        android:background="@drawable/gray_theme"
+                        android:fontFamily="@font/mu"
+                        android:paddingLeft="20dp"
+                        android:layout_marginBottom="30dp"
+                        android:paddingRight="20dp"
+                        android:text="Klasyka"
+                        android:textColor="@color/colorAccent2" />
+                </RelativeLayout>
+            </com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>
 
 
             <TextView
@@ -218,42 +257,166 @@
                 android:text="@string/Book_bookDescriptionText"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="30dp"
-                android:fontFamily="@font/mu"
+                android:fontFamily="@font/monte"
                 android:layout_marginRight="20dp"
                 android:id="@+id/Book_description"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textColor="#000"
                 android:textStyle="bold"
-                android:layout_below="@+id/Book_photoBook"
+                android:layout_below="@+id/hg"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:layout_width="wrap_content"
-                android:padding="10dp"
+                android:padding="15dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
-                android:textSize="17sp"
+                android:textSize="15sp"
 
 
                 android:textColor="#000"
-                android:fontFamily="@font/mu"
-                android:background="@drawable/theme3"
+                android:fontFamily="@font/monte"
+                android:background="@drawable/search_theme"
                 android:layout_marginRight="20dp"
                 android:id="@+id/textDescription"
                 android:layout_below="@+id/Book_description"
                 android:text="Pan Tadeusz, czyli Ostatni zajazd na Litwie – poemat epicki Adama Mickiewicza wydany w dwóch tomach w 1834 w Paryżu przez Aleksandra Jełowickiego. Ta epopeja narodowa powstała w latach 1832–1834 w Paryżu. Składa się z dwunastu ksiąg pisanych wierszem, trzynastozgłoskowym aleksandrynem polskim"
                 android:layout_height="wrap_content" />
 
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Oceń książkę"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/monte"
+                android:layout_marginRight="20dp"
+                android:id="@+id/Book_descriptisadon"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_below="@+id/textDescription"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_below="@+id/Book_descriptisadon"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:paddingTop="60dp"
+                android:paddingBottom="60dp"
+                android:id="@+id/cc"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/search_theme"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+
+
+                android:layout_height="wrap_content">
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/YourMark_ratingBookw"
+                    style="@style/Widget.MaterialRatingBar.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="49dp"
+
+
+                    android:layout_below="@+id/Book_yearPublish"
+                    android:layout_marginTop="3dp"
+                    android:layout_toEndOf="@+id/Book_userBookMark"
+
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:rating="2"
+                    android:paddingLeft="83dp"
+                    android:paddingRight="83dp"
+
+
+                    android:stepSize="1.0"
+                    android:scaleY="4"
+                    android:scaleX="4"
+                    android:layout_gravity="center"
+
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Skomentuj"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/monte"
+                android:layout_marginRight="20dp"
+                android:id="@+id/Book_descriptisadoni"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_below="@+id/cc"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_below="@+id/Book_descriptisadoni"
+                android:padding="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/search_theme"
+                android:layout_marginTop="10dp"
+                android:hint="Twój komentarz..."
+
+                android:textSize="15sp"
+                android:fontFamily="@font/monte"
+                android:inputType="textMultiLine"
+            android:lines="8"
+            android:minLines="6"
+            android:gravity="top|left"
+            android:maxLines="10"
+android:layout_marginBottom="150dp"
+            android:scrollbars="vertical"
+android:id="@+id/ff"
+
+
+
+                android:layout_height="wrap_content"></EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_alignBottom="@+id/ff"
+                android:text="Opublikuj"
+                android:fontFamily="@font/monte"
+                android:layout_margin="10dp"
+                android:textSize="15sp"
+                android:textColor="#000"
+
+
+                android:layout_alignEnd="@+id/ff"
+                android:layout_height="wrap_content"></TextView>
+
+
+
+
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_below="@+id/textDescription"
                 android:layout_marginTop="10dp"
+                android:visibility="gone"
                 android:orientation="horizontal"
                 android:weightSum="2"
                 android:layout_marginLeft="20dp"
                 android:id="@+id/Book_layoutChoiceShowMarkAndYourMark"
                 android:layout_marginRight="20dp"
                 android:layout_height="wrap_content">
+
+
+
+
+
+
 
                 <TextView
                     android:layout_width="wrap_content"

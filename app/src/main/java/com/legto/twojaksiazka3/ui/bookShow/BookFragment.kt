@@ -78,7 +78,7 @@ class BookFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_book, container, false)
+        return inflater.inflate(R.layout.newbook, container, false)
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -310,7 +310,7 @@ private fun addActionToClickWriters(){
          bookHowMarkView=view!!.findViewById(R.id.Book_howManyMarks)
          bookBackArrowView=view!!.findViewById(R.id.Book_returnToMenuArrow)
          bookScrollView=view!!.findViewById(R.id.Book_scroll)
-         panelFragment_userClick_youMark= view!!.findViewById(R.id.Book_yourMark)
+    //     panelFragment_userClick_youMark= view!!.findViewById(R.id.Book_yourMark)
          bookDescriptionView=view!!.findViewById(R.id.textDescription)
 
     }
@@ -391,7 +391,7 @@ private fun addActionToClickWriters(){
     private fun setActionWhenUserClickShowYouMark(){
         panelFragment_userClick_youMark.setOnClickListener {
 
-            setNewFragmentAboutMark(BookFragmentTypeEnum.SHOW_YOUR_MARK_FRAGMENT)
+           setNewFragmentAboutMark(BookFragmentTypeEnum.SHOW_YOUR_MARK_FRAGMENT)
             getAllPermition()
             choiceActionDependOnUserGiveMarkOrNot()
 
@@ -431,8 +431,8 @@ private fun addActionToClickWriters(){
         TextUtility.calculateNameBookSize(bookTitleView,bookShowData.titleBook,55f)
         bookAuthorNameView.text=bookShowData.nameAuthor
         bookMarkView.text=bookShowData.markBook
-        bookPageView.text=bookShowData.pageBook
-        bookYearView.text=bookShowData.yearPublish
+        bookPageView.text="Liczba stron - "+bookShowData.pageBook
+        bookYearView.text="Rok wydania - "+bookShowData.yearPublish
         bookDescriptionView.text=bookShowData.descriptionBook
 
         if(bookShowData.gentre_1!=" "){
@@ -493,8 +493,8 @@ private fun addActionToClickWriters(){
         downloadBookFromServerWhichUserShowActually_Firstly()
         scrollViewToTop()
         setActionWhenUserClickShowScheduleBooks()
-        setActionWhenUserClickShowYouMark()
-        showFirstlyShowFragment_YouVoted()
+//        setActionWhenUserClickShowYouMark()
+      //  showFirstlyShowFragment_YouVoted()
         fillLayoutBookData()
         addActionToClickWriters()
 
