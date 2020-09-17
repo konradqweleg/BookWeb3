@@ -374,7 +374,7 @@
             android:minLines="6"
             android:gravity="top|left"
             android:maxLines="10"
-android:layout_marginBottom="150dp"
+
             android:scrollbars="vertical"
 android:id="@+id/ff"
 
@@ -394,6 +394,97 @@ android:id="@+id/ff"
 
                 android:layout_alignEnd="@+id/ff"
                 android:layout_height="wrap_content"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Oceny"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/monte"
+                android:layout_marginRight="20dp"
+                android:id="@+id/zx"
+                android:textSize="15sp"
+                android:textColor="#000"
+
+                android:textStyle="bold"
+                android:layout_below="@+id/ff"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_below="@+id/zx"
+               android:paddingBottom="30dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingTop="30dp"
+                android:orientation="vertical"
+                android:id="@+id/jh"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/search_theme"
+                android:layout_height="wrap_content">
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/YourMark_ratingBoosdkw"
+                    style="@style/Widget.MaterialRatingBar.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="49dp"
+
+
+
+                    android:layout_below="@+id/Book_yearPublish"
+                    android:layout_marginTop="3dp"
+                    android:layout_toEndOf="@+id/Book_userBookMark"
+
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:rating="2"
+                    android:paddingLeft="83dp"
+                    android:paddingRight="83dp"
+
+
+                    android:stepSize="1.0"
+                    android:scaleY="4"
+                    android:scaleX="4"
+                    android:layout_gravity="center"
+
+                    android:textAlignment="center" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:textAlignment="center"
+                    android:text="(112 ocen)"
+                    android:textSize="48sp"
+                    android:fontFamily="@font/monte"
+                    android:textColor="#000"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Komentarze"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/monte"
+                android:layout_marginRight="20dp"
+                android:id="@+id/zsx"
+                android:textSize="15sp"
+                android:textColor="#000"
+
+                android:textStyle="bold"
+                android:layout_below="@+id/jh"
+                android:layout_height="wrap_content" />
+            <include layout="@layout/one_comment"
+                android:padding="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="150dp"
+                android:layout_marginRight="20dp"
+                android:layout_below="@+id/zsx"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" />
 
 
 

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:background="@drawable/search_theme"
+    android:padding="15dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="20dp"
+
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Marcel934"
+        android:textSize="15sp"
+        android:fontFamily="@font/monte"
+        android:id="@+id/zzc"
+        android:layout_height="wrap_content"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:textColor="#000"
+        android:text="Super książka"
+        android:textSize="18sp"
+        android:fontFamily="@font/monte"
+        android:layout_below="@+id/zzc"
+        android:layout_height="wrap_content"></TextView>
+
+    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+        android:id="@+id/qq"
+        style="@style/Widget.MaterialRatingBar.RatingBar.Small"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+
+
+
+
+
+
+        android:isIndicator="false"
+        android:numStars="1"
+        android:rating="1"
+
+
+
+        android:stepSize="1.0"
+        android:scaleY="1"
+        android:scaleX="1"
+        android:layout_gravity="center"
+
+        android:textAlignment="center" />
+    <TextView
+        android:layout_width="wrap_content"
+
+        android:text="5"
+        android:textColor="#000"
+        android:fontFamily="@font/monte"
+        android:textSize="24sp"
+        android:layout_toLeftOf="@+id/qq"
+        android:layout_height="wrap_content"></TextView>
+
+
+</RelativeLayout>

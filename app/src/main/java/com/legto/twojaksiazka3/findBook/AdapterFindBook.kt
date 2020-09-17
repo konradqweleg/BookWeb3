@@ -18,7 +18,7 @@ import java.lang.Exception
 
 class AdapterFindBook(private val context: Activity)
     : ArrayAdapter<String>(context,
-    R.layout.one_find_book) {
+    R.layout.one_popular_book_2) {
 
 
 
@@ -101,7 +101,7 @@ class AdapterFindBook(private val context: Activity)
 
     override fun getView(position: Int, view: View?, parent: ViewGroup): View {
         val inflater = context.layoutInflater
-        val rowView = inflater.inflate(R.layout.one_find_book, null, true)
+        val rowView = inflater.inflate(R.layout.one_popular_book_2, null, true)
 
 
 
