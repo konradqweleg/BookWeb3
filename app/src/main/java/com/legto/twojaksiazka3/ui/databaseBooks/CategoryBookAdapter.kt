@@ -9,7 +9,7 @@ import com.legto.twojaksiazka3.R
 
 class CategoryBookAdapter(private val context: Activity)
     : ArrayAdapter<String>(context,
-    R.layout.one_book_category) {
+    R.layout.onecategorybook) {
 
 
     val CATEGORY_BOOKS= listOf<String>("Horror","Thriller","Fantastyka","Kryminał","Dramat","Akcja","Science Fiction","Romans","Polska","Wszystkie")
@@ -23,7 +23,7 @@ class CategoryBookAdapter(private val context: Activity)
 
     override fun getView(position: Int, view: View?, parent: ViewGroup): View {
         val inflater = context.layoutInflater
-        val rowView = inflater.inflate(R.layout.one_book_category, null, true)
+        val rowView = inflater.inflate(R.layout.onecategorybook, null, true)
 
         val categoryName=rowView.findViewById<TextView>(R.id.OneCategory_Name)
         categoryName.text = CATEGORY_BOOKS[position]
@@ -31,8 +31,8 @@ class CategoryBookAdapter(private val context: Activity)
         val categoryImage=rowView.findViewById<ImageView>(R.id.OneCategory_image)
         categoryImage.setImageDrawable(context.resources.getDrawable(IMAGE_CATEGORY_BOOKS[position]))
 
-        var popularCategoryAuthors:TextView=rowView.findViewById(R.id.OneCategory_PopularAuthor)
-        popularCategoryAuthors.text = THE_BEST_POPULAR_AUTHORS_GENTRE[position]
+      //  var popularCategoryAuthors:TextView=rowView.findViewById(R.id.OneCategory_PopularAuthor)
+     //  popularCategoryAuthors.text = THE_BEST_POPULAR_AUTHORS_GENTRE[position]
 
 
 

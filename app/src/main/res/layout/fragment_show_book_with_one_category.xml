@@ -65,10 +65,15 @@
 
         <TextView
             android:layout_width="match_parent"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
             android:layout_marginTop="80dp"
+            android:gravity="center"
             android:text="Ocena"
+            android:fontFamily="@font/monte"
+            android:background="@drawable/searchthemegray"
             android:id="@+id/ocena"
-            android:textSize="30sp"
+            android:textSize="18sp"
             android:textAlignment="center"
             android:layout_height="wrap_content"></TextView>
 
@@ -81,24 +86,7 @@
                 android:paddingRight="20dp"
                 android:layout_below="@+id/ocena"
                 android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:text="od"
-                    android:textSize="23sp"
-                    android:layout_weight="3"
-                    android:layout_marginRight="10dp"
-                    android:textAlignment="center"
-                    android:background="@drawable/gray_theme"
-                    android:layout_height="wrap_content"></TextView>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:text="do"
-                    android:textSize="23sp"
-                    android:layout_weight="3"
-                    android:layout_marginLeft="10dp"
-                    android:textAlignment="center"
-                    android:background="@drawable/gray_theme"
-                    android:layout_height="wrap_content"></TextView>
+
 
 
 
@@ -140,13 +128,16 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="50dp"
               android:layout_below="@+id/vg"
-                android:textSize="30sp"
+                android:textSize="18sp"
+                android:gravity="center"
                 android:textAlignment="center"
                 android:layout_marginTop="10dp"
                 android:id="@+id/ghg"
-                android:layout_marginRight="20dp"
+                android:background="@drawable/searchthemegray"
+                android:fontFamily="@font/monte"
+                android:layout_marginRight="50dp"
                 android:text="Rok powstania"
                 android:layout_height="wrap_content"></TextView>
             <LinearLayout
@@ -187,14 +178,17 @@
             </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="50dp"
                 android:layout_below="@+id/vgdd"
-                android:textSize="30sp"
+                android:textSize="18sp"
                 android:textAlignment="center"
                 android:layout_marginTop="10dp"
                 android:id="@+id/ghgasd"
-                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/searchthemegray"
                 android:text="Autor"
+                android:fontFamily="@font/monte"
                 android:layout_height="wrap_content"></TextView>
             <EditText
                 android:layout_width="match_parent"
@@ -207,10 +201,12 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:text="Szukaj"
+                android:text="Filtruj"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
+                android:fontFamily="@font/monte"
                 android:layout_marginTop="10dp"
+
                 android:layout_below="@+id/ShowBookOneCategory_authorsName"
                 android:id="@+id/ShowBookOneCategory_addFilterToAdapter"
                 android:background="@drawable/main_button_background"

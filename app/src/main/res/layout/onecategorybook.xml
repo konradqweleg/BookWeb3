@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="#efefef"
+
+    android:layout_alignParentTop="true"
+
+    android:id="@+id/jk"
+    app:shadowAlpha="0.4"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    app:shadowOffsetX="0"
+    app:shadowOffsetY="3"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/OneCategory_color"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:elevation="5dp"
+        android:background="@drawable/search_theme"
+        android:weightSum="12"
+
+        android:layout_height="150dp" >
+
+
+        <ImageView
+            android:layout_width="90dp"
+
+
+            android:layout_weight="2"
+            android:layout_marginLeft="20dp"
+
+
+            android:id="@+id/OneCategory_image"
+
+            android:layout_height="140dp"></ImageView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="10"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/OneCategory_Name"
+                android:layout_marginLeft="5dp"
+                android:textColor="#000"
+                android:text="Klasyka"
+
+                android:gravity="center"
+                android:textStyle="bold"
+
+                android:textSize="25sp"
+
+
+
+
+
+                android:layout_marginTop="55dp"
+
+                android:fontFamily="@font/monte"
+                android:layout_height="wrap_content"></TextView>
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </LinearLayout>
+</com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>
