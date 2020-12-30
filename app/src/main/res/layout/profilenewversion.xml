@@ -12,13 +12,13 @@
         android:layout_height="match_parent">
 
 
-        <com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_alignParentTop="true"
             android:layout_marginTop="35dp"
             android:id="@+id/jk"
             app:shadowAlpha="0.4"
-
+            android:gravity="center"
             app:shadowOffsetX="0"
             app:shadowOffsetY="3"
             android:layout_height="wrap_content">
@@ -29,13 +29,14 @@
             android:layout_height="200dp"
             android:elevation="10dp"
             android:layout_margin="10dp"
+
             android:layout_marginTop="6dp"
 
             android:layout_centerHorizontal="true"
             android:src="@drawable/circleimages"
             app:civ_border_width="2dp"
             app:civ_border_color="#FF000000"/>
-        </com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>
+        </LinearLayout>
 
 
         <TextView
@@ -96,7 +97,7 @@
             >
 
 
-            <com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="10dp"
@@ -128,7 +129,7 @@
                 android:fontFamily="@font/mu"
                 android:textSize="25sp"
                 android:layout_height="wrap_content"></TextView>
-            </com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -176,7 +177,7 @@
             android:layout_height="wrap_content"
             >
 
-            <com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="0dp"
@@ -210,7 +211,7 @@
 
                 android:background="@drawable/gray2"
                 android:layout_height="wrap_content"></TextView>
-            </com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>
+            </LinearLayout>r>
         </LinearLayout>
 
         <LinearLayout
@@ -258,7 +259,7 @@
             android:weightSum="20"
             android:layout_height="wrap_content"
             >
-            <com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="0dp"
@@ -293,7 +294,7 @@
 
                 android:paddingBottom="20dp"
                 android:layout_height="wrap_content"></TextView>
-            </com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>
+            </LinearLayout>
         </LinearLayout>
 
 
@@ -342,7 +343,7 @@
             android:weightSum="20"
             android:layout_height="wrap_content"
             >
-            <com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="0dp"
@@ -373,7 +374,7 @@
                 android:padding="10dp"
                 android:elevation="5dp"
                 android:layout_height="wrap_content"></TextView>
-            </com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>
+            </LinearLayout>
 
 
         </LinearLayout>

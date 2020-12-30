@@ -9,7 +9,7 @@
     android:paddingTop="20dp"
 
     tools:context=".findBook.FindPanelBookFragment">
-    <com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_alignParentTop="true"
 
@@ -38,7 +38,7 @@
         android:inputType="text"
         tools:targetApi="o"
         tools:ignore="RtlSymmetry" />
-    </com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>
+    </LinearLayout>
 
     <ImageButton
         android:layout_width="wrap_content"

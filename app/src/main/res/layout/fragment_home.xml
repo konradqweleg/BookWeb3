@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#efefef"
-
+android:layout_marginBottom="30dp"
     android:layout_height="match_parent">
 
     <!--
@@ -15,6 +15,7 @@
     android:layout_width="match_parent"
     android:layout_marginLeft="13dp"
     android:layout_marginRight="13dp"
+    android:layout_marginTop="20dp"
 
 
 
@@ -26,20 +27,13 @@
 
 
 
-    <com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper
-        android:layout_width="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="30dp"
-        android:id="@+id/jk"
-        app:shadowAlpha="0.4"
-        app:shadowOffsetX="0"
-        app:shadowOffsetY="3"
-        android:layout_height="wrap_content">
+
         <EditText
             android:layout_width="match_parent"
             android:background="@drawable/search_theme"
             android:elevation="5dp"
-
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="30dp"
             android:hint="Szukaj"
 
 
@@ -47,6 +41,7 @@
 
             android:focusable="false"
             android:layout_margin="10dp"
+
 
 
             android:paddingStart="15dp"
@@ -60,19 +55,21 @@
             tools:ignore="RtlSymmetry" />
 
 
-    </com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>
+
 
     <ImageButton
         android:layout_width="wrap_content"
-        android:layout_alignEnd="@+id/jk"
+        android:layout_alignEnd="@+id/Home_searchBook"
         android:src="@drawable/icon_loop"
         android:paddingEnd="25dp"
 
 
+
         android:paddingTop="20dp"
-        android:layout_marginTop="30dp"
+
 
         android:background="@null"
+        android:elevation="10dp"
 
         android:layout_height="wrap_content"
 
@@ -84,7 +81,7 @@
         android:layout_height="wrap_content"
         android:text="Popularne książki"
         android:layout_marginTop="10dp"
-        android:layout_below="@+id/jk"
+        android:layout_below="@+id/Home_searchBook"
         android:fontFamily="@font/mu"
         android:letterSpacing="0.10"
         android:textStyle="bold"
@@ -100,7 +97,7 @@
         android:layout_marginTop="10dp"
         android:textAlignment="textEnd"
         android:fontFamily="@font/mu"
-        android:layout_below="@+id/jk"
+        android:layout_below="@+id/Home_searchBook"
         android:layout_alignParentEnd="true"
 
 

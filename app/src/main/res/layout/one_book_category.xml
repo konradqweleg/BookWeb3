@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_width="match_parent"
@@ -80,4 +80,4 @@ android:layout_marginLeft="10dp"
 
 
 </LinearLayout>
-</com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>
+</LinearLayout>

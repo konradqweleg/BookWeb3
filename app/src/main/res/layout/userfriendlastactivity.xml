@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="320dp"
+    android:layout_width="360dp"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper
 
-        android:layout_alignParentTop="true"
-        android:layout_width="320dp"
-        android:id="@+id/jk"
-        app:shadowAlpha="0.4"
-        app:shadowOffsetX="0"
-        app:shadowOffsetY="3"
-        android:layout_height="wrap_content">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:elevation="5dp"
             android:layout_margin="5dp"
 
             android:paddingTop="20dp"
+            android:paddingRight="20dp"
             android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
 
             android:background="@drawable/search_theme"
             android:layout_height="wrap_content">
@@ -29,6 +24,7 @@
                 android:layout_width="120dp"
                 android:layout_marginLeft="10dp"
                 android:layout_height="120dp"
+                android:layout_marginRight="10dp"
                 android:src="@drawable/blazej"
                 android:scaleType="fitCenter"
                 app:riv_corner_radius="3dip"
@@ -85,5 +81,5 @@
 
 
         </RelativeLayout>
-    </com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>
+
 </FrameLayout>

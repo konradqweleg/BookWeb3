@@ -52,7 +52,7 @@
 
             android:id="@+id/Book_relLayout"
             android:layout_height="wrap_content">
-            <com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="30dp"
@@ -249,7 +249,7 @@
                         android:text="Klasyka"
                         android:textColor="@color/colorAccent2" />
                 </RelativeLayout>
-            </com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>
+            </LinearLayout>
 
 
             <TextView

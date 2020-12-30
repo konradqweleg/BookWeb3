@@ -5,22 +5,16 @@
     android:layout_height="wrap_content"
 
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper
-        android:layout_width="250dp"
-        android:layout_alignParentTop="true"
 
-        android:id="@+id/jk"
-        app:shadowAlpha="0.4"
-        app:shadowOffsetX="0"
-        app:shadowOffsetY="3"
-        android:layout_height="wrap_content">
         <RelativeLayout
             android:layout_width="match_parent"
             android:elevation="5dp"
             android:layout_margin="5dp"
+            android:paddingRight="50dp"
             android:background="@drawable/search_theme"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
+
 
             android:layout_height="wrap_content">
 
@@ -106,5 +100,5 @@
 
 
         </RelativeLayout>
-    </com.sdsmdg.harjot.materialshadows.MaterialShadowViewWrapper>
+
 </FrameLayout>
