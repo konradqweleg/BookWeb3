@@ -8,6 +8,7 @@
   <ListView
       android:layout_width="match_parent"
       android:layout_marginLeft="20dp"
+      android:scrollbars="none"
       android:layout_marginRight="20dp"
       android:divider="@null"
       android:dividerHeight="0dp"

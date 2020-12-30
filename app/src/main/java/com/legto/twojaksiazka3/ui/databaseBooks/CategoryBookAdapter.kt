@@ -13,7 +13,7 @@ class CategoryBookAdapter(private val context: Activity)
 
 
     val CATEGORY_BOOKS= listOf<String>("Horror","Thriller","Fantastyka","Kryminał","Dramat","Akcja","Science Fiction","Romans","Polska","Wszystkie")
-    val IMAGE_CATEGORY_BOOKS= listOf<Int>(R.drawable.ic_halloween,R.drawable.ic_gg,R.drawable.ic_wizard,R.drawable.ic_spy,R.drawable.ic_theater,R.drawable.ic_tommy_gun,R.drawable.ic_sputnik,R.drawable.ic_heart,R.drawable.ic_poland,R.drawable.ic_infinity)
+    val IMAGE_CATEGORY_BOOKS= listOf<Int>(R.drawable.horror,R.drawable.thriller,R.drawable.fantastyka,R.drawable.kryminal,R.drawable.dramat,R.drawable.akcja,R.drawable.sciencefiction,R.drawable.romans,R.drawable.polska,R.drawable.wszystkie)
     val THE_BEST_POPULAR_AUTHORS_GENTRE= listOf<String>("King Lovecraft Simmons","Paris Coben Michaelides","Martin Tolkien Sapkowski","Läckberg Nesbø Horst","Mrożek Mickiewicz Shakespeare","Larsson Puzzo Harris","Watts Liu Miller","Reilly Wolf Keeland","Mróz Bonda Tokarczuk","Wszystkie książki")
 
 

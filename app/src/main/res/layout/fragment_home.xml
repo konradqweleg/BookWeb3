@@ -120,6 +120,7 @@
         android:orientation="horizontal"
         android:visibility="visible"
         android:drawSelectorOnTop="false"
+        android:descendantFocusability="blocksDescendants"
 
         tools:context=".MainActivity"
         tools:ignore="RedundantNamespace"

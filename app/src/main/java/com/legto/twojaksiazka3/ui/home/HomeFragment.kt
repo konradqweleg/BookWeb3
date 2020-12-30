@@ -77,9 +77,13 @@ class HomeFragment : Fragment() {
     }
 
     fun addOnCallbackClikPopularBookList(){
+
+        horizontalPopularBookList.setItemsCanFocus(false);
         horizontalPopularBookList.setOnItemClickListener { parent, view, position, id ->
+
             FromWhereBookShow.setFromWherIMustShowBook(FromWhereBookShow.From.FAVORITE_BOOK,position)
             findNavController(view).navigate(R.id.bookFragment)
+
         }
     }
 

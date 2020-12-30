@@ -63,6 +63,7 @@
 
     <ListView
         android:layout_width="match_parent"
+        android:descendantFocusability="blocksDescendants"
         android:id="@+id/FindBook_listProposition"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="57dp"

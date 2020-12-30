@@ -1,6 +1,7 @@
 package project.legto.twojaksiazka3.ui.home
 
 import android.app.Activity
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
@@ -59,6 +60,7 @@ class ListAdapter(private val context: Activity)
 
 
     if(bookMap.containsKey(position)){
+        Log.e("czy","Reset")
          val oneBook:Book?=bookMap[position]
       //   TextUtility.calculateNameBookSize(titleText, oneBook!!.titleBook, 35f)
          titleText.text = oneBook!!.titleBook
@@ -68,7 +70,7 @@ class ListAdapter(private val context: Activity)
        //  setCategoryBookInView(oneBook,gentreBook_1,gentreBook_2,gentreBook_3)
 
 
-    }else {
+    }else {  Log.e("czy","New")
 
          Fuel.get(
             getContext().resources.getString(R.string.GIVE_POPULAR_BOOK_ADRESS),
