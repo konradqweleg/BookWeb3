@@ -30,8 +30,8 @@ class AdapterListRankChoicer(private val context: Activity)
         val nameOptionList=rowView.findViewById<TextView>(R.id.Rank_mainTextList)
        nameOptionList.text = NAME_OPTION[position]
 
-        val optionImage=rowView.findViewById<ImageView>(R.id.Rank_imageList)
-        optionImage.setImageDrawable(context.resources.getDrawable(IMAGE_OPTION[position]))
+      //  val optionImage=rowView.findViewById<ImageView>(R.id.Rank_imageList)
+     //   optionImage.setImageDrawable(context.resources.getDrawable(IMAGE_OPTION[position]))
 
 
 
