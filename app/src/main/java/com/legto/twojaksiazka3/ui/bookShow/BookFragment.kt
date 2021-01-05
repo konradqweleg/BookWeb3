@@ -1,6 +1,5 @@
 package project.legto.twojaksiazka3.ui.bookShow
 
-import android.app.Activity
 import android.content.Context
 import android.graphics.Color
 import android.net.Uri
@@ -300,18 +299,18 @@ private fun addActionToClickWriters(){
          bookPhotoView=view!!.findViewById(R.id.Book_photoBook)
          bookAuthorNameView=view!!.findViewById(R.id.Book_authorsBook)
          scheduleMark=view!!.findViewById(R.id.Book_usersMarks)
-         bookMarkView=view!!.findViewById(R.id.Book_userBookMark)
+         bookMarkView=view!!.findViewById(R.id.ProfileWriters_writersMark)
          bookPageView=view!!.findViewById(R.id.Book_pageInBook)
          bookYearView=view!!.findViewById(R.id.Book_yearPublish)
-         bookGentreView_1=view!!.findViewById(R.id.Book_gentreBook_1)
-         bookGentreView_2=view!!.findViewById(R.id.Book_gentreBook_2)
+         bookGentreView_1=view!!.findViewById(R.id.ProfileWriters_ifTopBook)
+         bookGentreView_2=view!!.findViewById(R.id.ProfileWriters_ifTopWriters)
          bookGentreView_3=view!!.findViewById(R.id.Book_gentreBook_3)
 
          bookHowMarkView=view!!.findViewById(R.id.Book_howManyMarks)
          bookBackArrowView=view!!.findViewById(R.id.Book_returnToMenuArrow)
          bookScrollView=view!!.findViewById(R.id.Book_scroll)
     //     panelFragment_userClick_youMark= view!!.findViewById(R.id.Book_yourMark)
-         bookDescriptionView=view!!.findViewById(R.id.textDescription)
+         bookDescriptionView=view!!.findViewById(R.id.ProfileWriters_infoAboutAuthors)
 
     }
 

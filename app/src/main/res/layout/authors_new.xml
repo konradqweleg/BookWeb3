@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="20dp"
+    android:layout_height="match_parent"
+
+    android:background="#efefef"
+    tools:context=".ui.bookShow.BookFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:src="@drawable/arrow_left"
+            android:id="@+id/Book_returnToMenuArrow"
+            android:layout_alignBaseline="@+id/Book_favoriteBookAdd"
+            android:layout_alignTop="@+id/Book_favoriteBookAdd"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/Book_returnToMenu" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_marginTop="-5dp"
+            android:id="@+id/Book_favoriteBookAdd"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_heart_icon"
+            android:layout_height="30dp"
+            android:contentDescription="@string/Book_addToFavorite" />
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/Book_scroll"
+        android:fillViewport="true"
+
+        android:layout_marginTop="28dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginBottom="60dp"
+
+            android:id="@+id/Book_relLayout"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
+
+                android:id="@+id/hg"
+                app:shadowAlpha="0.4"
+                android:layout_margin="20dp"
+                app:shadowOffsetX="0"
+                app:shadowOffsetY="3"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:layout_margin="5dp"
+
+
+                    android:background="@drawable/search_theme"
+                    android:elevation="5dp">
+
+
+                    <ImageView
+                        android:id="@+id/Book_photoBook"
+                        android:layout_width="120dp"
+                        android:layout_height="160dp"
+                        android:layout_marginTop="16dp"
+                        android:contentDescription="@string/Book_bookImageDescription"
+                        android:padding="6dp"
+                        android:src="@drawable/tadekd" />
+
+                    <TextView
+                        android:id="@+id/Book_markText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Book_yearPublish"
+                        android:layout_toEndOf="@+id/Book_photoBook"
+                        android:fontFamily="@font/monte"
+                        android:text="Ocena - "
+
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+
+
+                    <TextView
+                        android:id="@+id/ProfileWriters_writersMark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Book_yearPublish"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_toEndOf="@+id/Book_markText"
+                        android:fontFamily="@font/mu"
+
+                        android:text="5,5"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="13sp" />
+
+                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:id="@+id/YourMark_ratingBook"
+                        style="@style/Widget.MaterialRatingBar.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_below="@+id/Book_yearPublish"
+                        android:layout_marginTop="3dp"
+                        android:layout_toEndOf="@+id/ProfileWriters_writersMark"
+
+                        android:isIndicator="false"
+                        android:numStars="1"
+                        android:rating="6"
+
+
+                        android:stepSize="1.0"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:id="@+id/Book_bookTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18.6dp"
+                        android:layout_toEndOf="@+id/Book_photoBook"
+
+                        android:fontFamily="@font/monte"
+                        android:text="Pan Tadeusz"
+                        android:textColor="#000"
+                        android:textSize="18sp"
+
+                        android:textStyle="bold" />
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Book_authorsBook"
+                        android:layout_toEndOf="@+id/Book_photoBook"
+                        android:fontFamily="@font/mu"
+                        android:text=""
+                        android:textColor="@color/colorAccent"
+                        android:textSize="50sp">
+
+                    </TextView>
+
+
+
+                    <TextView
+                        android:id="@+id/Book_yearBirth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Book_bookTitle"
+
+
+                        android:layout_toEndOf="@+id/Book_photoBook"
+                        android:fontFamily="@font/monte"
+                        android:text="Rok urodzenia - 1933"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/Book_yearPublish"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Book_yearBirth"
+
+
+                        android:layout_toEndOf="@+id/Book_photoBook"
+                        android:fontFamily="@font/monte"
+                        android:text="Rok wydania - 1933"
+                        android:textColor="#000"
+                        android:textSize="13sp" />
+
+
+                    <TextView
+                        android:id="@+id/ProfileWriters_ifTopBook"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/Book_photoBook"
+                        android:layout_toEndOf="@+id/Book_photoBook"
+
+                        android:background="@drawable/gray_theme"
+                        android:fontFamily="@font/mu"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="Top Książka"
+                        android:textColor="@color/colorAccent2" />
+
+                    <TextView
+                        android:id="@+id/ProfileWriters_ifTopWriters"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/Book_photoBook"
+                        android:layout_marginLeft="5dp"
+
+                        android:layout_toEndOf="@+id/ProfileWriters_ifTopBook"
+                        android:background="@drawable/gray_theme"
+                        android:fontFamily="@font/mu"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="Top Autor"
+
+                        android:textColor="@color/colorAccent2" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Życiorys"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/monte"
+                android:layout_marginRight="20dp"
+                android:id="@+id/Book_description"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_below="@+id/hg"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"
+
+
+                android:textColor="#000"
+                android:fontFamily="@font/monte"
+                android:background="@drawable/search_theme"
+                android:layout_marginRight="20dp"
+                android:id="@+id/ProfileWriters_infoAboutAuthors"
+                android:layout_below="@+id/Book_description"
+                android:text="Stephen Edwin King (ur. 21 września 1947 w Portland) – amerykański pisarz, autor głównie literatury grozy. W przeszłości wydawał książki pod pseudonimem Richard Bachman, raz jako John Swithen. Jego książki rozeszły się w nakładzie przekraczającym 350 milionów egzemplarzy, co czyni go jednym z najbardziej poczytnych pisarzy na świecie"
+                android:layout_height="wrap_content" />
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Książki"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/monte"
+                android:layout_marginRight="20dp"
+                android:id="@+id/Book_descriptisadon"
+                android:textSize="15sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_below="@+id/ProfileWriters_infoAboutAuthors"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_below="@+id/Book_descriptisadon"
+
+                android:paddingTop="20dp"
+                android:paddingBottom="60dp"
+
+                android:id="@+id/cc"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+
+                android:gravity="center"
+
+                android:layout_marginBottom="30dp"
+
+
+                android:layout_height="wrap_content">
+
+                <org.lucasr.twowayview.TwoWayView
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/fv"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp"
+                    android:paddingLeft="2dp"
+
+                    android:paddingRight="5dp"
+                    android:divider="#00000000"
+                    android:dividerHeight="10dp"
+                    android:id="@+id/WritersProfile_bookListWriteByAutors"
+                    android:layout_height="wrap_content"></org.lucasr.twowayview.TwoWayView>
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+
+</FrameLayout>

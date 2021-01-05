@@ -80,14 +80,14 @@
             android:layout_below="@+id/Book_authorsBook"
             android:layout_marginTop="15dp"
             android:layout_marginStart="3dp"
-            android:layout_toEndOf="@+id/Book_userBookMark"
+            android:layout_toEndOf="@+id/ProfileWriters_writersMark"
             android:layout_height="wrap_content" />
 
         <TextView
             android:layout_width="wrap_content"
             android:text="5,5"
             android:layout_marginBottom="10dp"
-            android:id="@+id/Book_userBookMark"
+            android:id="@+id/ProfileWriters_writersMark"
             android:layout_below="@+id/Book_authorsBook"
             android:fontFamily="@font/mu"
             android:layout_toEndOf="@+id/Book_markText"
@@ -159,7 +159,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_toEndOf="@+id/Book_photoBook"
-            android:layout_above="@+id/Book_gentreBook_1"
+            android:layout_above="@+id/ProfileWriters_ifTopBook"
             android:id="@+id/Book_yearsPublishText"
             android:layout_marginBottom="15dp"
             android:fontFamily="@font/mu"
@@ -174,14 +174,14 @@
             android:textStyle="bold"
             android:text="1834"
             android:fontFamily="@font/mu"
-            android:layout_above="@+id/Book_gentreBook_1"
+            android:layout_above="@+id/ProfileWriters_ifTopBook"
             android:layout_height="wrap_content" />
 
         <TextView
             android:layout_width="wrap_content"
             android:text="Klasyka"
             android:textColor="@color/colorAccent2"
-            android:id="@+id/Book_gentreBook_1"
+            android:id="@+id/ProfileWriters_ifTopBook"
             android:background="@drawable/gray_theme"
             android:layout_toEndOf="@+id/Book_photoBook"
             android:fontFamily="@font/mu"
@@ -192,10 +192,10 @@
             android:text="Klasyka"
             android:fontFamily="@font/mu"
             android:textColor="@color/colorAccent2"
-            android:id="@+id/Book_gentreBook_2"
+            android:id="@+id/ProfileWriters_ifTopWriters"
             android:background="@drawable/gray_theme"
             android:layout_marginLeft="5dp"
-            android:layout_toEndOf="@+id/Book_gentreBook_1"
+            android:layout_toEndOf="@+id/ProfileWriters_ifTopBook"
             android:layout_alignBottom="@+id/Book_photoBook"
             android:layout_height="wrap_content" />
         <TextView
@@ -206,7 +206,7 @@
             android:id="@+id/Book_gentreBook_3"
             android:background="@drawable/gray_theme"
             android:layout_marginLeft="5dp"
-            android:layout_toEndOf="@+id/Book_gentreBook_2"
+            android:layout_toEndOf="@+id/ProfileWriters_ifTopWriters"
             android:layout_alignBottom="@+id/Book_photoBook"
             android:layout_height="wrap_content" />
 
@@ -238,14 +238,14 @@
             android:fontFamily="@font/mu"
             android:background="@drawable/theme3"
             android:layout_marginRight="20dp"
-            android:id="@+id/textDescription"
+            android:id="@+id/ProfileWriters_infoAboutAuthors"
             android:layout_below="@+id/Book_description"
             android:text="Pan Tadeusz, czyli Ostatni zajazd na Litwie – poemat epicki Adama Mickiewicza wydany w dwóch tomach w 1834 w Paryżu przez Aleksandra Jełowickiego. Ta epopeja narodowa powstała w latach 1832–1834 w Paryżu. Składa się z dwunastu ksiąg pisanych wierszem, trzynastozgłoskowym aleksandrynem polskim"
             android:layout_height="wrap_content" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_below="@+id/textDescription"
+            android:layout_below="@+id/ProfileWriters_infoAboutAuthors"
             android:layout_marginTop="10dp"
             android:orientation="horizontal"
             android:weightSum="2"

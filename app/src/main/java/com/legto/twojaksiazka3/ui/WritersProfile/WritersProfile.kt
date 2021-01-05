@@ -95,15 +95,15 @@ class WritersProfile : Fragment(), BaseFrragment {
     }
 
     private fun initialiseReferenceView(){
-        listWriteBookByWritersView=view!!.findViewById(R.id.WritersProfile_bookListWriteByAutors)
-        imageWriters=view!!.findViewById<ImageView>(R.id.ProfileWriters_photoWriters)
-        nameWriters=view!!.findViewById(R.id.ProfileWriters_nameAuthors)
-        howManyBooksWriteAuthors=view!!.findViewById(R.id.ProfileWriters_writeBook)
+      listWriteBookByWritersView=view!!.findViewById(R.id.WritersProfile_bookListWriteByAutors)
+        imageWriters=view!!.findViewById<ImageView>(R.id.Book_photoBook)
+        nameWriters=view!!.findViewById(R.id.Book_bookTitle)
+        howManyBooksWriteAuthors=view!!.findViewById(R.id.Book_yearPublish)
         markAuthors=view!!.findViewById(R.id.ProfileWriters_writersMark)
         infoAboutAuthors=view!!.findViewById(R.id.ProfileWriters_infoAboutAuthors)
         ifTopBook=view!!.findViewById(R.id.ProfileWriters_ifTopBook)
         ifTopWriters=view!!.findViewById(R.id.ProfileWriters_ifTopWriters)
-        returnBack=view!!.findViewById(R.id.ProfileWriters_returnToMenuArrow)
+       returnBack=view!!.findViewById(R.id.Book_returnToMenuArrow)
 
     }
 
@@ -155,7 +155,7 @@ class WritersProfile : Fragment(), BaseFrragment {
     }
     private fun fillViewDownlaodData(){
         nameWriters.setText(writersData.nameAuthors+" "+writersData.surnameAuthors)
-        howManyBooksWriteAuthors.setText(""+writersData.howManyBookWriteAuthors)
+        howManyBooksWriteAuthors.setText("Książki ("+writersData.howManyBookWriteAuthors+")")
         markAuthors.setText(""+writersData.markAuthors)
 
 
@@ -180,10 +180,10 @@ class WritersProfile : Fragment(), BaseFrragment {
 
         downloadWritersData()
         downloadWritersPhoto()
-        addAdapterToListWriteBook()
+       addAdapterToListWriteBook()
         fillViewDownlaodData()
-        addCallbackReturn()
-        addClickToBookOnListWriteByWriters()
+       addCallbackReturn()
+      addClickToBookOnListWriteByWriters()
     }
 
     override fun onCreateView(
@@ -191,7 +191,7 @@ class WritersProfile : Fragment(), BaseFrragment {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_writers_profile, container, false)
+        return inflater.inflate(R.layout.authors_new, container, false)
     }
 
     companion object {

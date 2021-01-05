@@ -53,7 +53,7 @@
 
             <ImageView
                 android:layout_width="180dp"
-                android:id="@+id/ProfileWriters_photoWriters"
+                android:id="@+id/Book_photoBook"
                 android:layout_marginTop="16dp"
                 android:src="@drawable/autors"
                 android:layout_height="200dp"
@@ -62,12 +62,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:text="@string/Book_mark"
-                android:layout_toEndOf="@+id/ProfileWriters_photoWriters"
+                android:layout_toEndOf="@+id/Book_photoBook"
                 android:textColor="#000"
                 android:textSize="20sp"
                 android:id="@+id/ProfileWriters_markWriters"
                 android:layout_marginTop="10dp"
-                android:layout_below="@+id/ProfileWriters_nameAuthors"
+                android:layout_below="@+id/Book_bookTitle"
                 android:layout_height="wrap_content" />
 
 
@@ -76,7 +76,7 @@
                 android:layout_width="wrap_content"
                 android:text="5,5"
                 android:id="@+id/ProfileWriters_writersMark"
-                android:layout_below="@+id/ProfileWriters_nameAuthors"
+                android:layout_below="@+id/Book_bookTitle"
                 android:layout_toEndOf="@+id/ProfileWriters_markWriters"
                 android:textSize="20sp"
                 android:layout_marginTop="10dp"
@@ -86,7 +86,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:text="Książek:"
-                android:layout_toEndOf="@+id/ProfileWriters_photoWriters"
+                android:layout_toEndOf="@+id/Book_photoBook"
                 android:textColor="#000"
                 android:textSize="20sp"
                 android:id="@+id/ProfileWriters_markWritersx"
@@ -99,7 +99,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:text="22"
-                android:id="@+id/ProfileWriters_writeBook"
+                android:id="@+id/Book_yearPublish"
                 android:layout_below="@+id/ProfileWriters_markWriters"
                 android:layout_toEndOf="@+id/ProfileWriters_markWriters"
                 android:textSize="20sp"
@@ -109,7 +109,7 @@
                 android:layout_height="wrap_content" />
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_toEndOf="@+id/ProfileWriters_photoWriters"
+                android:layout_toEndOf="@+id/Book_photoBook"
                 android:layout_above="@+id/ProfileWriters_ifTopBook"
                 android:id="@+id/Book_yearsPublishText"
                 android:layout_marginBottom="15dp"
@@ -135,9 +135,9 @@
 
                 android:textSize="25sp"
                 android:fontFamily="@font/roboto"
-                android:id="@+id/ProfileWriters_nameAuthors"
+                android:id="@+id/Book_bookTitle"
 
-                android:layout_toEndOf="@+id/ProfileWriters_photoWriters"
+                android:layout_toEndOf="@+id/Book_photoBook"
                 android:textColor="#000"
                 android:layout_marginTop="16dp"
                 android:layout_height="wrap_content" />
@@ -146,8 +146,8 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_below="@+id/ProfileWriters_nameAuthors"
-                android:layout_toEndOf="@+id/ProfileWriters_photoWriters"
+                android:layout_below="@+id/Book_bookTitle"
+                android:layout_toEndOf="@+id/Book_photoBook"
                 android:text=""
                 android:textSize="50sp"
                 android:textColor="@color/colorAccent"
@@ -170,8 +170,8 @@
                 android:textColor="@color/colorAccent2"
                 android:id="@+id/ProfileWriters_ifTopBook"
                 android:background="@drawable/gray_theme"
-                android:layout_toEndOf="@+id/ProfileWriters_photoWriters"
-                android:layout_alignBottom="@+id/ProfileWriters_photoWriters"
+                android:layout_toEndOf="@+id/Book_photoBook"
+                android:layout_alignBottom="@+id/Book_photoBook"
                 android:layout_height="wrap_content" />
             <TextView
                 android:layout_width="wrap_content"
@@ -181,7 +181,7 @@
                 android:background="@drawable/gray_theme"
                 android:layout_marginLeft="5dp"
                 android:layout_toEndOf="@+id/ProfileWriters_ifTopBook"
-                android:layout_alignBottom="@+id/ProfileWriters_photoWriters"
+                android:layout_alignBottom="@+id/Book_photoBook"
                 android:layout_height="wrap_content" />
 
 
@@ -197,7 +197,7 @@
                 android:textSize="20sp"
                 android:textColor="#000"
                 android:textStyle="bold"
-                android:layout_below="@+id/ProfileWriters_photoWriters"
+                android:layout_below="@+id/Book_photoBook"
                 android:layout_height="wrap_content" />
 
             <TextView
