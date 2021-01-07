@@ -212,7 +212,7 @@ private lateinit var filterAddToAdapter:Button
                 animate()
 
                     .setDuration(300)
-                    .translationX((330.px.toFloat()))
+                    .translationX((390.px.toFloat()))
                     .setListener(null)
             }
         }

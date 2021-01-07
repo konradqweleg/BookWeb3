@@ -18,7 +18,7 @@ import java.lang.Exception
 
 class AdapterShowBookWithOneCategoryWithFilter(private val context: Activity)
     : ArrayAdapter<String>(context,
-    R.layout.one_list_with_category) {
+    R.layout.one_list_with_category_new) {
 
 
 
@@ -119,7 +119,7 @@ class AdapterShowBookWithOneCategoryWithFilter(private val context: Activity)
 
     override fun getView(position: Int, view: View?, parent: ViewGroup): View {
         val inflater = context.layoutInflater
-        val rowView = inflater.inflate(R.layout.one_list_with_category, null, true)
+        val rowView = inflater.inflate(R.layout.one_list_with_category_new, null, true)
 
 
         val titleText = rowView.findViewById(R.id.OneCategoryBook_title) as TextView

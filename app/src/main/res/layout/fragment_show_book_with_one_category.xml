@@ -3,11 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#efefef"
     tools:context=".ui.databaseBooks.ShowBookWithOneCategory">
 
 
     <ImageView
-        android:layout_width="wrap_content"
+        android:layout_width="20dp"
         android:background="@drawable/arrow_left"
         android:id="@+id/ShowBookOneCategory_returnCategoryBookButton"
         android:layout_margin="20dp"
@@ -24,7 +25,7 @@
         android:layout_width="wrap_content"
         android:text="Horror"
         android:layout_centerHorizontal="true"
-        android:textSize="27sp"
+        android:textSize="23sp"
         android:layout_marginTop="10dp"
 
         android:id="@+id/ShowBookOneCategory_nameCategoryBooks"
@@ -37,19 +38,26 @@
         android:layout_width="400dp"
         android:layout_below="@+id/ShowBookOneCategory_returnCategoryBookButton"
         android:id="@+id/ShowBookOneCategory_ListBooks"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="70dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
         android:layout_height="wrap_content"></ListView>
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="330dp"
-        android:layout_marginBottom="65dp"
+        android:layout_marginBottom="95dp"
+        android:background="@drawable/search_theme"
+        android:layout_marginTop="40dp"
+
         android:layout_alignParentRight="true"
+        android:layout_marginRight="40dp"
 
 
         android:id="@+id/ShowBookOneCategory_filterPanel"
 
         android:layout_height="match_parent" >
         <RelativeLayout
+            android:background="#efefef"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -69,11 +77,15 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="80dp"
             android:gravity="center"
+            android:background="@drawable/search_theme"
             android:text="Ocena"
+            android:elevation="3dp"
             android:fontFamily="@font/monte"
-            android:background="@drawable/searchthemegray"
+            android:textColor="#000"
+            android:textSize="14sp"
+
             android:id="@+id/ocena"
-            android:textSize="18sp"
+
             android:textAlignment="center"
             android:layout_height="wrap_content"></TextView>
 
@@ -130,12 +142,15 @@
                 android:layout_width="match_parent"
                 android:layout_marginLeft="50dp"
               android:layout_below="@+id/vg"
-                android:textSize="18sp"
+                android:textColor="#000"
+                android:textSize="14sp"
                 android:gravity="center"
+                android:elevation="3dp"
                 android:textAlignment="center"
                 android:layout_marginTop="10dp"
                 android:id="@+id/ghg"
-                android:background="@drawable/searchthemegray"
+
+                android:background="@drawable/search_theme"
                 android:fontFamily="@font/monte"
                 android:layout_marginRight="50dp"
                 android:text="Rok powstania"
@@ -180,13 +195,16 @@
                 android:layout_width="match_parent"
                 android:layout_marginLeft="50dp"
                 android:layout_below="@+id/vgdd"
-                android:textSize="18sp"
+
                 android:textAlignment="center"
                 android:layout_marginTop="10dp"
                 android:id="@+id/ghgasd"
+                android:elevation="3dp"
+                android:textColor="#000"
+                android:textSize="14sp"
                 android:gravity="center"
                 android:layout_marginRight="50dp"
-                android:background="@drawable/searchthemegray"
+                android:background="@drawable/search_theme"
                 android:text="Autor"
                 android:fontFamily="@font/monte"
                 android:layout_height="wrap_content"></TextView>
@@ -202,11 +220,13 @@
             <Button
                 android:layout_width="match_parent"
                 android:text="Filtruj"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+
+                android:layout_marginLeft="86dp"
+                android:layout_marginRight="88dp"
                 android:fontFamily="@font/monte"
                 android:layout_marginTop="10dp"
-
+                android:textColor="#000"
+                android:textSize="14sp"
                 android:layout_below="@+id/ShowBookOneCategory_authorsName"
                 android:id="@+id/ShowBookOneCategory_addFilterToAdapter"
                 android:background="@drawable/main_button_background"

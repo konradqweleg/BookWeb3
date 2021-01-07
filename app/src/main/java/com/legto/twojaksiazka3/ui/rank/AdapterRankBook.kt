@@ -17,7 +17,7 @@ import java.lang.Exception
 
 class AdapterRankBook(private val context: Activity)
     : ArrayAdapter<String>(context,
-    R.layout.one_list_with_book_rank) {
+    R.layout.one_list_with_vategory_rank) {
 
 
 
@@ -75,7 +75,7 @@ class AdapterRankBook(private val context: Activity)
 
     override fun getView(position: Int, view: View?, parent: ViewGroup): View {
         val inflater = context.layoutInflater
-        val rowView = inflater.inflate(R.layout.one_list_with_book_rank, null, true)
+        val rowView = inflater.inflate(R.layout.one_list_with_vategory_rank, null, true)
 
 
         val titleText = rowView.findViewById(R.id.OneCategoryBook_title) as TextView

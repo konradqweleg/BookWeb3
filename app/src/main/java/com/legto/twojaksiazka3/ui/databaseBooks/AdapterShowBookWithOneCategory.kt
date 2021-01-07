@@ -18,7 +18,7 @@ import java.lang.Exception
 
 class AdapterShowBookWithOneCategory(private val context: Activity)
     : ArrayAdapter<String>(context,
-    R.layout.one_list_with_category) {
+    R.layout.one_list_with_category_new) {
 
     var listElement=0
     val WIDTH_IMAGE=230
