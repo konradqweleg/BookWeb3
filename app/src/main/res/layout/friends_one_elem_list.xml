@@ -1,45 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <ImageView
-        android:layout_alignParentTop="true"
-        android:id="@+id/FriendsList_image"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/ic_person_black_24dp"
-        android:layout_width="120dp"
-        android:layout_height="120dp"></ImageView>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="380dp"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
 
-    <TextView
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:text="Konrad Groń"
-        android:textAlignment="center"
-        android:id="@+id/FriendsList_name"
-        android:textSize="20sp"
-        android:layout_toEndOf="@+id/FriendsList_image"
+        android:elevation="5dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginBottom="15dp"
         android:layout_marginTop="15dp"
-        android:layout_height="wrap_content"></TextView>
-    <TextView
-        android:layout_width="match_parent"
-        android:id="@+id/FriendsList_howBookReads"
-        android:text="37 książek"
-        android:textAlignment="center"
-        android:layout_below="@+id/FriendsList_name"
-        android:textSize="20sp"
-        android:layout_toEndOf="@+id/FriendsList_image"
-        android:layout_marginTop="5dp"
-        android:layout_height="wrap_content"></TextView>
-    <TextView
-        android:layout_width="match_parent"
-        android:id="@+id/FriendsList_rankPosition"
-        android:text="7 miejsce"
-        android:textAlignment="center"
-        android:layout_below="@+id/FriendsList_howBookReads"
-        android:textSize="20sp"
-        android:layout_toEndOf="@+id/FriendsList_image"
-        android:layout_marginTop="5dp"
-        android:layout_height="wrap_content"></TextView>
+
+        android:background="@drawable/search_theme"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
 
 
-</RelativeLayout>
+        android:layout_height="wrap_content">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/FriendsList_image"
+            android:layout_width="120dp"
+
+            android:layout_height="140dp"
+
+            android:src="@drawable/person"
+            android:scaleType="fitCenter"
+            app:riv_corner_radius="3dip"
+            app:riv_border_width="2dip"
+            app:riv_border_color="#fff"
+            app:riv_mutate_background="true"
+            app:riv_tile_mode="repeat"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="60dp"
+
+
+
+            android:fontFamily="@font/monte"
+            android:textAlignment="center"
+            android:id="@+id/FriendsList_name"
+            android:textSize="17sp"
+            android:textColor="#000"
+
+            android:text="Pan Tadeusz"
+            android:layout_height="wrap_content"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:layout_below="@id/FriendsList_name"
+            android:fontFamily="@font/monte"
+           android:id="@+id/FriendsList_howBookReads"
+            android:textSize="13sp"
+            android:paddingLeft="60dp"
+            android:text="Przeczytane książki -"
+
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:layout_below="@id/FriendsList_howBookReads"
+            android:fontFamily="@font/monte"
+            android:id="@+id/FriendsList_rr"
+            android:textSize="10sp"
+            android:paddingLeft="60dp"
+            android:text="Ranking użytkowników"
+
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/FriendsList_rankPosition"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/FriendsList_rr"
+            android:layout_marginTop="-2dp"
+            android:layout_toEndOf="@+id/List_image"
+            android:fontFamily="@font/mu"
+            android:paddingLeft="60dp"
+            android:text="7"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="24sp">
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

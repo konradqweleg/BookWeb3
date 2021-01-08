@@ -60,6 +60,10 @@ class BookFragment : Fragment() {
     private lateinit  var panelFragment_userClick_youMark:TextView
     private lateinit var bookShowData: Book
     private lateinit  var bookDescriptionView:TextView
+    private lateinit var userBookMarkData:Mark
+    private lateinit var markUserView:me.zhanghai.android.materialratingbar.MaterialRatingBar
+
+
 
 
 
@@ -311,6 +315,7 @@ private fun addActionToClickWriters(){
          bookScrollView=view!!.findViewById(R.id.Book_scroll)
     //     panelFragment_userClick_youMark= view!!.findViewById(R.id.Book_yourMark)
          bookDescriptionView=view!!.findViewById(R.id.ProfileWriters_infoAboutAuthors)
+        markUserView=view!!.findViewById(R.id.YourMark_ratingBookw)
 
     }
 
@@ -359,7 +364,28 @@ private fun addActionToClickWriters(){
 
     }
 
+
+    private fun downloadUserBookMark(userId:Int,idBook:Int){
+        runBlocking {
+            val (request, response, result) =  Fuel.get(
+                resources.getString(R.string.USER_BOOK_MARK_ADRESS),
+                listOf("idUser" to userId, "idBook" to idBook)
+            ).awaitStringResponse()
+
+
+            userBookMarkData =
+                BookMarkAndOpinion().deserialize(
+                    response.data
+                )
+            Log.e("ocena"," Ustawiam twoją ocenke w widoku "+userBookMarkData.mark)
+            markUserView.rating=userBookMarkData.mark.toFloat()
+
+
+        }
+    }
+
     private fun choiceActionDependOnUserGiveMarkOrNot(){
+        Log.e("ocena","Dane otrzymane "+UserData.idUser.toString()+" "+ bookShowData.idBook.toString())
         Fuel.get(context!!.resources.getString(R.string.IF_USER_VOTED_BOOK_ADRESS), listOf("userId" to UserData.idUser,"idBook" to bookShowData.idBook )).response { _, response, _ ->
 
             val responseIfUserVotedBook =
@@ -367,16 +393,20 @@ private fun addActionToClickWriters(){
                     response.data
                 )
 
-            if (responseIfUserVotedBook.ifUserGiveMark) {
 
-                Book_Utility.changeFragmentTo(activity!!.supportFragmentManager,R.id.Book_marksPanelFragment,VotedBook(UserData.idUser,bookShowData.idBook))
+            Log.e("ocena","czy dałeś ocene ? "+responseIfUserVotedBook.ifUserGiveMark.toString())
+            if (responseIfUserVotedBook.ifUserGiveMark) {
+                downloadUserBookMark(UserData.idUser,bookShowData.idBook)
+                Log.e("ocena"," Dałeś ocene")
+
+              //  Book_Utility.changeFragmentTo(activity!!.supportFragmentManager,R.id.Book_marksPanelFragment,VotedBook(UserData.idUser,bookShowData.idBook))
 
 
 
             }else{
 
 
-                Book_Utility.changeFragmentTo(activity!!.supportFragmentManager,R.id.Book_marksPanelFragment,YourMark(idBookParam = bookShowData.idBook,userOpinionParam = "",userMarkParam = ""))
+              //  Book_Utility.changeFragmentTo(activity!!.supportFragmentManager,R.id.Book_marksPanelFragment,YourMark(idBookParam = bookShowData.idBook,userOpinionParam = "",userMarkParam = ""))
 
             }
 
@@ -387,15 +417,15 @@ private fun addActionToClickWriters(){
 
     }
 
-    private fun setActionWhenUserClickShowYouMark(){
-        panelFragment_userClick_youMark.setOnClickListener {
+    private fun setActionShowMarkAndGive(){
+       // panelFragment_userClick_youMark.setOnClickListener {
 
-           setNewFragmentAboutMark(BookFragmentTypeEnum.SHOW_YOUR_MARK_FRAGMENT)
+          // setNewFragmentAboutMark(BookFragmentTypeEnum.SHOW_YOUR_MARK_FRAGMENT)
             getAllPermition()
             choiceActionDependOnUserGiveMarkOrNot()
 
 
-        }
+      //  }
 
     }
 
@@ -495,6 +525,7 @@ private fun addActionToClickWriters(){
 //        setActionWhenUserClickShowYouMark()
       //  showFirstlyShowFragment_YouVoted()
         fillLayoutBookData()
+        setActionShowMarkAndGive()
         addActionToClickWriters()
 
 

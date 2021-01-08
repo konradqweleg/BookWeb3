@@ -12,7 +12,8 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
-        android:textSize="30sp"
+        android:textSize="20sp"
+        android:textColor="#000"
         android:text="Znajomi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +22,9 @@
     <ListView
         android:layout_width="match_parent"
         android:id="@+id/Friends_friendsList"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="60dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
         android:layout_below="@+id/text_notifications"
         android:layout_height="match_parent"></ListView>
 </RelativeLayout>
