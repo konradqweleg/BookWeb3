@@ -60,6 +60,7 @@
                 android:layout_toEndOf="@+id/List_image"
                 android:layout_below="@+id/List_authorsBook"
                 android:orientation="horizontal"
+                android:id="@+id/gh"
                 android:layout_height="wrap_content">
                 <TextView
                     android:layout_width="wrap_content"
@@ -94,6 +95,14 @@
                     />
 
             </LinearLayout>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_toEndOf="@+id/List_image"
+                android:textSize="13dp"
+                android:text="To jeden z najlepszych współczesnych horrorów. Nastrój grozy i napięcia potęguje się w niej z każdą minutą... "
+                android:layout_below="@+id/gh"
+                android:layout_height="wrap_content"></TextView>
 
 
 

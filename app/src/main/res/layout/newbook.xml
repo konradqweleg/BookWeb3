@@ -314,9 +314,14 @@
                 android:background="@drawable/search_theme"
                 android:gravity="center"
                 android:layout_marginTop="10dp"
+                android:orientation="vertical"
 
 
                 android:layout_height="wrap_content">
+
+
+
+
                 <me.zhanghai.android.materialratingbar.MaterialRatingBar
                     android:id="@+id/YourMark_ratingBookw"
                     style="@style/Widget.MaterialRatingBar.RatingBar.Small"
@@ -330,17 +335,35 @@
 
                     android:isIndicator="false"
                     android:numStars="5"
-                    android:rating="2"
+                    android:rating="0"
                     android:paddingLeft="83dp"
                     android:paddingRight="83dp"
 
 
                     android:stepSize="1.0"
-                    android:scaleY="4"
-                    android:scaleX="4"
+                    android:scaleY="3"
+                    android:scaleX="3"
                     android:layout_gravity="center"
 
                     android:textAlignment="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textAlignment="center"
+                    android:id="@+id/BookMark_descriptionActionMark"
+                    android:text="Oceń"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/yellowtheme"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textStyle="bold"
+
+
+
+                    android:textColor="#000"
+
+                    android:layout_height="wrap_content"></TextView>
             </LinearLayout>
 
 

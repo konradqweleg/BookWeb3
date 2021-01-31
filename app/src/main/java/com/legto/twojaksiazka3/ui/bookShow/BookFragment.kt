@@ -9,9 +9,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.ScrollView
-import android.widget.TextView
+import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.github.kittinunf.fuel.Fuel
@@ -40,6 +38,8 @@ class BookFragment : Fragment() {
     private var param2: String? = null
     private var listener: OnFragmentInteractionListener? = null
 
+    private var howModificationRating:Int=0
+
 
 
     private lateinit var panelFragment_userClick_scheduleBooks:TextView
@@ -60,6 +60,7 @@ class BookFragment : Fragment() {
     private lateinit  var panelFragment_userClick_youMark:TextView
     private lateinit var bookShowData: Book
     private lateinit  var bookDescriptionView:TextView
+    private lateinit var descriptionActionMark:TextView
     private lateinit var userBookMarkData:Mark
     private lateinit var markUserView:me.zhanghai.android.materialratingbar.MaterialRatingBar
 
@@ -316,6 +317,7 @@ private fun addActionToClickWriters(){
     //     panelFragment_userClick_youMark= view!!.findViewById(R.id.Book_yourMark)
          bookDescriptionView=view!!.findViewById(R.id.ProfileWriters_infoAboutAuthors)
         markUserView=view!!.findViewById(R.id.YourMark_ratingBookw)
+        descriptionActionMark=view!!.findViewById(R.id.BookMark_descriptionActionMark)
 
     }
 
@@ -366,6 +368,7 @@ private fun addActionToClickWriters(){
 
 
     private fun downloadUserBookMark(userId:Int,idBook:Int){
+        Log.e("ocena","Pobieram ocene")
         runBlocking {
             val (request, response, result) =  Fuel.get(
                 resources.getString(R.string.USER_BOOK_MARK_ADRESS),
@@ -379,10 +382,13 @@ private fun addActionToClickWriters(){
                 )
             Log.e("ocena"," Ustawiam twoją ocenke w widoku "+userBookMarkData.mark)
             markUserView.rating=userBookMarkData.mark.toFloat()
+            descriptionActionMark.setText("Zmień")
 
 
         }
     }
+
+
 
     private fun choiceActionDependOnUserGiveMarkOrNot(){
         Log.e("ocena","Dane otrzymane "+UserData.idUser.toString()+" "+ bookShowData.idBook.toString())
@@ -438,6 +444,35 @@ private fun addActionToClickWriters(){
     }
 
 
+    private fun sendUserMarkOnServer(){
+        Log.e("ocena","wysyłam na serwer nową ocenke")
+
+            Fuel.post(resources.getString(R.string.MARK_BOOK_ADRESS), listOf("mark" to markUserView.rating,"opinion" to "","idUser" to UserData.idUser,"idBook" to bookShowData.idBook)).response { _, response, _ ->
+                Log.e("ocena","Nowa ocenka wysłana")
+             
+            }
+
+
+    }
+
+    private fun addCallbackChangeOrSetMark(){
+
+        descriptionActionMark.setOnClickListener{
+            sendUserMarkOnServer()
+            Toast.makeText(context, "Oceniono książkę na: ${markUserView.rating}", Toast.LENGTH_SHORT).show()
+        }
+
+        /*markUserView.setOnRatingBarChangeListener(object : RatingBar.OnRatingBarChangeListener {
+            override fun onRatingChanged(p0: RatingBar?, p1: Float, p2: Boolean) {
+
+                if(howModificationRating>0) {
+                    Toast.makeText(context, "Oceniono książkę na: $p1", Toast.LENGTH_SHORT).show()
+                    sendUserMarkOnServer()
+                }
+                howModificationRating+=1
+            }
+        })  */
+    }
 
     private fun addCallbackToBackArrowToMenu(){
         bookBackArrowView.setOnClickListener {
@@ -527,7 +562,7 @@ private fun addActionToClickWriters(){
         fillLayoutBookData()
         setActionShowMarkAndGive()
         addActionToClickWriters()
-
+        addCallbackChangeOrSetMark()
 
 
 
