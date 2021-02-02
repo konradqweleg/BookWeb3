@@ -104,6 +104,10 @@
                 android:layout_below="@+id/gh"
                 android:layout_height="wrap_content"></TextView>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
 
 
 

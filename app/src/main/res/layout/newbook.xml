@@ -340,7 +340,7 @@
                     android:paddingRight="83dp"
 
 
-                    android:stepSize="1.0"
+                    android:stepSize="0.5"
                     android:scaleY="3"
                     android:scaleX="3"
                     android:layout_gravity="center"
@@ -449,12 +449,20 @@ android:id="@+id/ff"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/search_theme"
                 android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="4.33"
+                    android:textSize="27dp"
+                    android:id="@+id/Book_MarkBig"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"></TextView>
                 <me.zhanghai.android.materialratingbar.MaterialRatingBar
                     android:id="@+id/YourMark_ratingBoosdkw"
                     style="@style/Widget.MaterialRatingBar.RatingBar.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="49dp"
-
 
 
                     android:layout_below="@+id/Book_yearPublish"
@@ -463,14 +471,14 @@ android:id="@+id/ff"
 
                     android:isIndicator="false"
                     android:numStars="5"
-                    android:rating="2"
+                    android:rating="0"
                     android:paddingLeft="83dp"
                     android:paddingRight="83dp"
 
 
-                    android:stepSize="1.0"
-                    android:scaleY="4"
-                    android:scaleX="4"
+                    android:stepSize="0.1"
+                    android:scaleY="3"
+                    android:scaleX="3"
                     android:layout_gravity="center"
 
                     android:textAlignment="center" />
@@ -482,6 +490,7 @@ android:id="@+id/ff"
                     android:textSize="48sp"
                     android:fontFamily="@font/monte"
                     android:textColor="#000"
+                    android:id="@+id/Book_howMarks"
                     android:layout_height="wrap_content"></TextView>
 
             </LinearLayout>

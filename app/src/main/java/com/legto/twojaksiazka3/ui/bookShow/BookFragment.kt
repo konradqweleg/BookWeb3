@@ -64,6 +64,10 @@ class BookFragment : Fragment() {
     private lateinit var userBookMarkData:Mark
     private lateinit var markUserView:me.zhanghai.android.materialratingbar.MaterialRatingBar
 
+    private lateinit var markAllUserViewStars:me.zhanghai.android.materialratingbar.MaterialRatingBar
+    private lateinit var markBookAllUser:TextView
+    private lateinit var howMarksBook:TextView
+
 
 
 
@@ -319,6 +323,10 @@ private fun addActionToClickWriters(){
         markUserView=view!!.findViewById(R.id.YourMark_ratingBookw)
         descriptionActionMark=view!!.findViewById(R.id.BookMark_descriptionActionMark)
 
+        markAllUserViewStars=view!!.findViewById(R.id.YourMark_ratingBoosdkw)
+        markBookAllUser=view!!.findViewById(R.id.Book_MarkBig)
+        howMarksBook=view!!.findViewById(R.id.Book_howMarks)
+
     }
 
 
@@ -382,7 +390,7 @@ private fun addActionToClickWriters(){
                 )
             Log.e("ocena"," Ustawiam twoją ocenke w widoku "+userBookMarkData.mark)
             markUserView.rating=userBookMarkData.mark.toFloat()
-            descriptionActionMark.setText("Zmień")
+
 
 
         }
@@ -404,12 +412,14 @@ private fun addActionToClickWriters(){
             if (responseIfUserVotedBook.ifUserGiveMark) {
                 downloadUserBookMark(UserData.idUser,bookShowData.idBook)
                 Log.e("ocena"," Dałeś ocene")
+                descriptionActionMark.setText("Usuń")
 
               //  Book_Utility.changeFragmentTo(activity!!.supportFragmentManager,R.id.Book_marksPanelFragment,VotedBook(UserData.idUser,bookShowData.idBook))
 
 
 
             }else{
+                descriptionActionMark.setText("Oceń")
 
 
               //  Book_Utility.changeFragmentTo(activity!!.supportFragmentManager,R.id.Book_marksPanelFragment,YourMark(idBookParam = bookShowData.idBook,userOpinionParam = "",userMarkParam = ""))
@@ -462,16 +472,15 @@ private fun addActionToClickWriters(){
             Toast.makeText(context, "Oceniono książkę na: ${markUserView.rating}", Toast.LENGTH_SHORT).show()
         }
 
-        /*markUserView.setOnRatingBarChangeListener(object : RatingBar.OnRatingBarChangeListener {
+        markUserView.setOnRatingBarChangeListener(object : RatingBar.OnRatingBarChangeListener {
             override fun onRatingChanged(p0: RatingBar?, p1: Float, p2: Boolean) {
 
                 if(howModificationRating>0) {
-                    Toast.makeText(context, "Oceniono książkę na: $p1", Toast.LENGTH_SHORT).show()
-                    sendUserMarkOnServer()
+                    descriptionActionMark.setText("Zmień")
                 }
                 howModificationRating+=1
             }
-        })  */
+        })
     }
 
     private fun addCallbackToBackArrowToMenu(){
@@ -517,7 +526,9 @@ private fun addActionToClickWriters(){
 
 
 
-
+        markAllUserViewStars.rating=bookShowData.markBook.toFloat()
+        markBookAllUser.text=bookShowData.markBook
+        howMarksBook.text="("+bookShowData.countMark+" ocen)"
 
         bookHowMarkView.text=TextUtility.getDescriptionHowManyMark(bookShowData.countMark)
 
