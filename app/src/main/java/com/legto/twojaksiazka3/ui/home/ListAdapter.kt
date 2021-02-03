@@ -7,14 +7,18 @@ import android.view.ViewGroup
 import android.widget.*
 import com.github.kittinunf.fuel.Fuel
 import com.legto.twojaksiazka3.R
+import com.legto.twojaksiazka3.ui.home.Mark
+import com.legto.twojaksiazka3.ui.home.MarkData
 import com.squareup.picasso.Picasso
-
+import project.legto.twojaksiazka3.utility.SaveUserAuthorization
+import project.legto.twojaksiazka3.utility.UserData
 
 
 class ListAdapter(private val context: Activity)
     : ArrayAdapter<String>(context,
     R.layout.homebook) {
     private var bookMap=mutableMapOf<Int,Book>()
+    private var markMap=mutableMapOf<Int,Mark>()
     private var imageBookMap= mutableMapOf<Int,ImageView>()
 
 
@@ -44,6 +48,44 @@ class ListAdapter(private val context: Activity)
         }
     }
 
+
+
+    fun downloadUserMarkBook(view:TextView,idBook:Int,idUser:Int,position: Int){
+
+
+        Fuel.get(
+            getContext().resources.getString(R.string.GET_MARK_BOOK_ABOUT_ID_FROM_USER_ABOUT_ID),
+            listOf(
+                "idBook" to idBook,
+                "idUser" to idUser
+            )
+        ).response { _, _, result ->
+            result.fold(
+                success = {
+                    val mark =
+                        MarkData().deserialize(
+                            it
+                        )
+                    Log.e("ocenka", mark.mark.toString())
+                    view.setText(mark.mark.toString())
+                    markMap[position] = mark
+
+
+
+                },
+                failure = { error ->
+
+                }
+            )
+        }
+
+
+
+
+    }
+
+
+
     override fun getView(position: Int, view: View?, parent: ViewGroup): View {
         val inflater = context.layoutInflater
         val rowView = inflater.inflate(R.layout.homebook, null, true)
@@ -56,6 +98,7 @@ class ListAdapter(private val context: Activity)
       //  val gentreBook_2:TextView= rowView.findViewById(R.id.List_gentreBook_2) as TextView
        // val gentreBook_3:TextView= rowView.findViewById(R.id.List_gentreBook_3) as TextView
         val imageBook:ImageView=rowView.findViewById(R.id.List_image) as ImageView
+        val userMark:TextView=rowView.findViewById(R.id.userMark) as TextView
 
 
 
@@ -67,6 +110,14 @@ class ListAdapter(private val context: Activity)
          authorBook.text = oneBook!!.nameAuthor
          markBook.text = oneBook!!.markBook
          imageBook.setImageDrawable(imageBookMap[position]!!.drawable)
+
+
+        if(markMap.containsKey(position)){
+           userMark.setText(markMap[position]!!.mark.toString())
+        }else{
+            downloadUserMarkBook(userMark,oneBook.idBook, UserData.idUser,position)
+        }
+
        //  setCategoryBookInView(oneBook,gentreBook_1,gentreBook_2,gentreBook_3)
 
 
@@ -84,6 +135,12 @@ class ListAdapter(private val context: Activity)
                         BookData().deserialize(
                             it
                         )
+                 if(markMap.containsKey(position)){
+                     userMark.setText(markMap[position]!!.mark)
+                 }else{
+                     downloadUserMarkBook(userMark,oneBookData.idBook, UserData.idUser,position)
+                 }
+
 
 
 

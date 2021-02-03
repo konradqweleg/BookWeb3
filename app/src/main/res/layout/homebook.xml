@@ -6,10 +6,12 @@
 
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:elevation="5dp"
             android:layout_margin="5dp"
+
             android:paddingRight="50dp"
             android:background="@drawable/search_theme"
             android:paddingTop="20dp"
@@ -100,18 +102,42 @@
                 android:layout_width="150dp"
                 android:layout_toEndOf="@+id/List_image"
                 android:textSize="13dp"
+                android:id="@+id/cc"
                 android:text="To jeden z najlepszych współczesnych horrorów. Nastrój grozy i napięcia potęguje się w niej z każdą minutą... "
                 android:layout_below="@+id/gh"
                 android:layout_height="wrap_content"></TextView>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></TextView>
+
 
 
 
 
 
         </RelativeLayout>
+    <TextView
+        android:layout_width="35dp"
+
+        android:gravity="top"
+        android:background="@drawable/round"
+
+        android:layout_gravity="end|bottom"
+        android:id="@+id/userMark"
+
+
+        android:text="6"
+       android:textAlignment="center"
+        android:paddingTop="3dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+
+
+        android:textSize="20sp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+
+           android:elevation="20dp"
+
+        android:layout_height="35dp"></TextView>
+
 
 </FrameLayout>

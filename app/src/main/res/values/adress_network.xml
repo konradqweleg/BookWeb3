@@ -50,4 +50,6 @@
     <string name="GET_SIZE_BOOK_READ_BY_FRIEND">http://twoja.server098764.nazwa.pl/getSizeReadBooksByFriend</string>
     <string name="GET_LAST_ACTIVITY_FRIENDa_DRESS">http://twoja.server098764.nazwa.pl/returnLastActivityUserAbaouFbId</string>
 
+    <string name="GET_MARK_BOOK_ABOUT_ID_FROM_USER_ABOUT_ID">http://192.168.55.107:3000/ifUserGiveMarkBookAndWhat</string>
+
 </resources>
