@@ -9,4 +9,4 @@ class BookMarkAndOpinion : ResponseDeserializable<Mark> {
         jacksonObjectMapper().readValue<Mark>(bytes)
 }
 
-data class Mark(val mark: String,val opinion:String)
+data class Mark(val mark: Float,val opinion:String)

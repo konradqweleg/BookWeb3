@@ -136,7 +136,7 @@ class ListAdapter(private val context: Activity)
                             it
                         )
                  if(markMap.containsKey(position)){
-                     userMark.setText(markMap[position]!!.mark)
+                     userMark.setText(markMap[position]!!.mark.toString())
                  }else{
                      downloadUserMarkBook(userMark,oneBookData.idBook, UserData.idUser,position)
                  }

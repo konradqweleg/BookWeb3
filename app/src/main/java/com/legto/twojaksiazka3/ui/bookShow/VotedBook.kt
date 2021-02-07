@@ -39,7 +39,7 @@ class VotedBook(val idUser:Int,val idBook:Int) : Fragment() {
     private var param2: String? = null
     private var listener: OnFragmentInteractionListener? = null
 
-    private lateinit var mark:String
+    private var mark=0.0f
     private lateinit var opinion:String
 
     private lateinit var  markBook_User:TextView
@@ -47,7 +47,7 @@ class VotedBook(val idUser:Int,val idBook:Int) : Fragment() {
     private lateinit var  changeMarkButton_User:Button
     private lateinit var userBookMarkData:Mark
     private lateinit var  removeMarkButton:Button
-    private val USER_NOT_GIVE_MARK_BOOKS="-1"
+    private val USER_NOT_GIVE_MARK_BOOKS=0.0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -102,7 +102,7 @@ class VotedBook(val idUser:Int,val idBook:Int) : Fragment() {
 
     private fun fillLayoutMarkUserData(){
 
-        markBook_User.text = userBookMarkData.mark
+        markBook_User.text = userBookMarkData.mark.toString()
         opinionBookUser.setText(userBookMarkData.opinion.trim())
         opinionBookUser.setEnabled(false)
         mark = userBookMarkData.mark
@@ -111,7 +111,7 @@ class VotedBook(val idUser:Int,val idBook:Int) : Fragment() {
     }
 
     private fun choiceFragmentToShowOnBaseUserMarkBookOrNot(){
-        if(userBookMarkData.mark != USER_NOT_GIVE_MARK_BOOKS){
+        if(userBookMarkData.mark != USER_NOT_GIVE_MARK_BOOKS.toFloat()){
             fillLayoutMarkUserData()
 
         }else{
@@ -122,7 +122,7 @@ class VotedBook(val idUser:Int,val idBook:Int) : Fragment() {
 
     private fun addCallbackToChangeMarkButton(){
         changeMarkButton_User.setOnClickListener {
-            Book_Utility.changeFragmentTo(activity!!.getSupportFragmentManager(),R.id.Book_marksPanelFragment, YourMark(idBook, mark, opinion))
+            Book_Utility.changeFragmentTo(activity!!.getSupportFragmentManager(),R.id.Book_marksPanelFragment, YourMark(idBook, mark.toString(), opinion))
         }
 
     }

@@ -15,7 +15,7 @@
     <string name="GET_COMMENTS_BOOKS_ADRESS">http://twoja.server098764.nazwa.pl/getCommentBook</string>
     <string name="IF_USER_VOTED_BOOK_ADRESS">http://twoja.server098764.nazwa.pl/ifUserVotedBook</string>
     <string name="USER_BOOK_MARK_ADRESS">http://twoja.server098764.nazwa.pl/returnUserBookMark</string>
-    <string name="MARK_BOOK_ADRESS">"http://twoja.server098764.nazwa.pl/markBook"</string>
+    <string name="MARK_BOOK_ADRESS">"http://192.168.55.103:3000/markBook"</string>
     <string name="USER_MARK_STATISTICS_ADRESS">"http://twoja.server098764.nazwa.pl/getUsersMarkStatistics"</string>
     <string name="FIND_BOOK_LIST_ADRESS">"http://twoja.server098764.nazwa.pl/returnBookWithNameFilter"</string>
     <string name="HOW_MANY_BOOKS_IN_CATEGORY_ADRESS">http://twoja.server098764.nazwa.pl/howManyBookWithOneCategory?category=</string>
@@ -50,6 +50,11 @@
     <string name="GET_SIZE_BOOK_READ_BY_FRIEND">http://twoja.server098764.nazwa.pl/getSizeReadBooksByFriend</string>
     <string name="GET_LAST_ACTIVITY_FRIENDa_DRESS">http://twoja.server098764.nazwa.pl/returnLastActivityUserAbaouFbId</string>
 
-    <string name="GET_MARK_BOOK_ABOUT_ID_FROM_USER_ABOUT_ID">http://192.168.55.107:3000/ifUserGiveMarkBookAndWhat</string>
+    <string name="GET_MARK_BOOK_ABOUT_ID_FROM_USER_ABOUT_ID">http://twoja.server098764.nazwa.pl/ifUserGiveMarkBookAndWhat</string>
+
+    <string name="REMOVE_BOOK_MARK_ADRESS">http://twoja.server098764.nazwa.pl/removeBookMark</string>
+
+    <string name="INSERT_COMMENT_BOOK_ADRESS">http://twoja.server098764.nazwa.pl/insertCommentBook</string>
+    <string name="IF_USER_ADD_COMMENT_BOOK">http://twoja.server098764.nazwa.pl/ifUserAddComment</string>
 
 </resources>

@@ -12,4 +12,4 @@ class MarkData : ResponseDeserializable<Mark> {
         jacksonObjectMapper().readValue<Mark>(bytes)
 }
 
-data class Mark(val mark: Int)
+data class Mark(val mark: Float)

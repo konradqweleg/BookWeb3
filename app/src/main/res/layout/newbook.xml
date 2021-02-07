@@ -13,6 +13,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
 
+
         android:layout_height="wrap_content">
 
         <ImageView
@@ -50,6 +51,7 @@
             android:layout_width="match_parent"
             android:layout_marginBottom="60dp"
 
+
             android:id="@+id/Book_relLayout"
             android:layout_height="wrap_content">
             <LinearLayout
@@ -58,10 +60,11 @@
                 android:layout_marginTop="30dp"
 
                 android:id="@+id/hg"
-                app:shadowAlpha="0.4"
+
                android:layout_margin="20dp"
                 app:shadowOffsetX="0"
                 app:shadowOffsetY="3"
+                app:shadowAlpha="0.4"
                 android:layout_height="wrap_content">
 
                 <RelativeLayout
@@ -73,7 +76,7 @@
 
 
                     android:background="@drawable/search_theme"
-                    android:elevation="5dp">
+                   >
 
 
                     <ImageView
@@ -186,7 +189,9 @@
                         android:layout_below="@+id/YourMark_ratingBook"
 
                         android:layout_toEndOf="@+id/Book_photoBook"
-                        android:fontFamily="@font/mu"
+                        android:fontFamily="@font/monte"
+                        android:textColor="#000"
+                        android:textSize="13sp"
                         android:text="@string/Book_howManyPageText" />
 
 
@@ -212,12 +217,12 @@
                         android:layout_alignBottom="@+id/Book_photoBook"
                         android:layout_toEndOf="@+id/Book_photoBook"
 
-                        android:background="@drawable/gray_theme"
+                        android:background="@drawable/yellowtheme"
                         android:fontFamily="@font/mu"
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
                         android:text="Klasyka"
-                        android:textColor="@color/colorAccent2" />
+                        android:textColor="#000" />
 
                     <TextView
                         android:id="@+id/ProfileWriters_ifTopWriters"
@@ -227,12 +232,12 @@
                         android:layout_marginLeft="5dp"
 
                         android:layout_toEndOf="@+id/ProfileWriters_ifTopBook"
-                        android:background="@drawable/gray_theme"
+                        android:background="@drawable/yellowtheme"
                         android:fontFamily="@font/mu"
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
                         android:text="Klasyka"
-                        android:textColor="@color/colorAccent2" />
+                        android:textColor="#000" />
 
                     <TextView
                         android:id="@+id/Book_gentreBook_3"
@@ -242,13 +247,13 @@
                         android:layout_marginTop="10dp"
                         android:layout_toEndOf="@+id/Book_photoBook"
 
-                        android:background="@drawable/gray_theme"
+                        android:background="@drawable/yellowtheme"
                         android:fontFamily="@font/mu"
                         android:paddingLeft="20dp"
                         android:layout_marginBottom="30dp"
                         android:paddingRight="20dp"
                         android:text="Klasyka"
-                        android:textColor="@color/colorAccent2" />
+                        android:textColor="#000" />
                 </RelativeLayout>
             </LinearLayout>
 
@@ -257,7 +262,7 @@
                 android:layout_width="wrap_content"
                 android:text="@string/Book_bookDescriptionText"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/monte"
                 android:layout_marginRight="20dp"
                 android:id="@+id/Book_description"
@@ -381,6 +386,9 @@
                 android:layout_below="@+id/cc"
                 android:layout_height="wrap_content" />
 
+
+
+
             <EditText
                 android:layout_width="match_parent"
                 android:layout_below="@+id/Book_descriptisadoni"
@@ -414,6 +422,7 @@ android:id="@+id/ff"
                 android:layout_margin="10dp"
                 android:textSize="15sp"
                 android:textColor="#000"
+                android:id="@+id/insertBookMarkView"
 
 
                 android:layout_alignEnd="@+id/ff"
@@ -476,7 +485,7 @@ android:id="@+id/ff"
                     android:paddingRight="83dp"
 
 
-                    android:stepSize="0.1"
+                    android:stepSize="0.01"
                     android:scaleY="3"
                     android:scaleX="3"
                     android:layout_gravity="center"
@@ -509,6 +518,29 @@ android:id="@+id/ff"
                 android:textStyle="bold"
                 android:layout_below="@+id/jh"
                 android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Więcej"
+
+                android:letterSpacing="0.10"
+
+                android:textAlignment="textEnd"
+                android:fontFamily="@font/mu"
+                android:layout_below="@+id/jh"
+                android:layout_alignParentEnd="true"
+
+
+                android:textStyle="bold"
+                android:layout_marginRight="20dp"
+                android:textColor="#555"
+                android:paddingTop="3.5dp"
+                android:paddingBottom="3.5dp"
+                android:textSize="13sp"
+                android:id="@+id/ee2"
+
+                android:layout_marginTop="30dp"
+                android:layout_height="wrap_content"></TextView>
             <include layout="@layout/one_comment"
                 android:padding="15dp"
                 android:layout_marginLeft="20dp"

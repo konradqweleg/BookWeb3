@@ -15,6 +15,7 @@ import androidx.navigation.Navigation
 import com.github.kittinunf.fuel.Fuel
 import com.github.kittinunf.fuel.coroutines.awaitStringResponse
 import com.legto.twojaksiazka3.R
+import com.legto.twojaksiazka3.ui.bookShow.CommentDatas
 import com.squareup.picasso.Picasso
 import kotlinx.coroutines.runBlocking
 import project.legto.twojaksiazka3.CategoryBooks
@@ -67,6 +68,9 @@ class BookFragment : Fragment() {
     private lateinit var markAllUserViewStars:me.zhanghai.android.materialratingbar.MaterialRatingBar
     private lateinit var markBookAllUser:TextView
     private lateinit var howMarksBook:TextView
+
+    private lateinit var insertCommentBookView:TextView
+    private lateinit var commentView:EditText
 
 
 
@@ -327,6 +331,33 @@ private fun addActionToClickWriters(){
         markBookAllUser=view!!.findViewById(R.id.Book_MarkBig)
         howMarksBook=view!!.findViewById(R.id.Book_howMarks)
 
+        insertCommentBookView=view!!.findViewById(R.id.insertBookMarkView)
+        commentView=view!!.findViewById(R.id.ff)
+
+    }
+
+    private fun addCallbackClickInsertCommentBook(){
+        insertCommentBookView.setOnClickListener {
+
+
+            if(commentView.text.toString().length>0) {
+                Fuel.get(
+                    context!!.resources.getString(R.string.INSERT_COMMENT_BOOK_ADRESS),
+                    listOf(
+                        "idUser" to UserData.idUser,
+                        "idBook" to bookShowData.idBook,
+                        "comment" to commentView.text
+                    )
+                ).response { _, response, _ ->
+
+                }
+            }else{
+                Toast.makeText(context, "Brak treści komentarza !", Toast.LENGTH_SHORT).show()
+
+            }
+
+
+        }
     }
 
 
@@ -397,7 +428,11 @@ private fun addActionToClickWriters(){
     }
 
 
-
+    //Zamień na enum
+    //0-Usuń
+    //1-Modyfikuj
+    //2-Dodaj
+    private var typeAction=0
     private fun choiceActionDependOnUserGiveMarkOrNot(){
         Log.e("ocena","Dane otrzymane "+UserData.idUser.toString()+" "+ bookShowData.idBook.toString())
         Fuel.get(context!!.resources.getString(R.string.IF_USER_VOTED_BOOK_ADRESS), listOf("userId" to UserData.idUser,"idBook" to bookShowData.idBook )).response { _, response, _ ->
@@ -412,14 +447,18 @@ private fun addActionToClickWriters(){
             if (responseIfUserVotedBook.ifUserGiveMark) {
                 downloadUserBookMark(UserData.idUser,bookShowData.idBook)
                 Log.e("ocena"," Dałeś ocene")
-                descriptionActionMark.setText("Usuń")
+
+                    descriptionActionMark.setText("Usuń")
+
+                typeAction=0
 
               //  Book_Utility.changeFragmentTo(activity!!.supportFragmentManager,R.id.Book_marksPanelFragment,VotedBook(UserData.idUser,bookShowData.idBook))
 
 
 
             }else{
-                descriptionActionMark.setText("Oceń")
+            //    descriptionActionMark.setText("Oceń")
+                typeAction=2
 
 
               //  Book_Utility.changeFragmentTo(activity!!.supportFragmentManager,R.id.Book_marksPanelFragment,YourMark(idBookParam = bookShowData.idBook,userOpinionParam = "",userMarkParam = ""))
@@ -463,20 +502,92 @@ private fun addActionToClickWriters(){
             }
 
 
+
+    }
+
+    private fun removeMarkBook(){
+        Fuel.get(resources.getString(R.string.REMOVE_BOOK_MARK_ADRESS), listOf("idBook" to bookShowData.idBook,"idUser" to UserData.idUser)).response { _, response, _ ->
+            Log.e("ocena","Nowa ocenka wysłana")
+
+
+        }
+       // descriptionActionMark.setText("Oceń")
+        markUserView.rating=0.toFloat()
+    }
+
+
+    private fun checkIfUserCommentBook(){//zmien na nieblokujace
+        runBlocking {
+            val (request, response, result) = Fuel.get(
+                context!!.getString(R.string.IF_USER_ADD_COMMENT_BOOK),
+                listOf(
+                    "idUser" to UserData.idUser,
+                    "idBook" to bookShowData.idBook
+
+                )
+            ).awaitStringResponse()
+
+
+           var commentData = CommentDatas().deserialize(response.data)
+
+            if(commentData.isCommentExist){
+                commentView.setText(commentData.comment.toString())
+                commentView.setEnabled(false)
+            }
+
+
+        }
+
     }
 
     private fun addCallbackChangeOrSetMark(){
+        Log.e("stan",descriptionActionMark.text.toString())
+
+
 
         descriptionActionMark.setOnClickListener{
-            sendUserMarkOnServer()
-            Toast.makeText(context, "Oceniono książkę na: ${markUserView.rating}", Toast.LENGTH_SHORT).show()
+
+            if(markUserView.rating<0.5f){
+                markUserView.rating=0.5f
+            }
+
+
+
+            if(descriptionActionMark.text=="Usuń"){
+                Toast.makeText(context, "Usunięto ocene !", Toast.LENGTH_SHORT).show()
+                removeMarkBook()
+                descriptionActionMark.setText("Oceń")
+
+            }
+            else {
+                Toast.makeText(context, "Oceniono książkę na: ${markUserView.rating}", Toast.LENGTH_SHORT).show()
+                sendUserMarkOnServer()
+                descriptionActionMark.setText("Usuń")
+            }
+
+         //   if(descriptionActionMark.text=="Zmień"){
+         //       descriptionActionMark.setText("Usuń")
+         //   }else if(descriptionActionMark.text=="Usuń"){
+          //      descriptionActionMark.setText("Oceń")
+        //    }else if(descriptionActionMark.text=="Oceń"){
+       //         descriptionActionMark.setText("Usuń")
+         //   }
+
+
+
         }
 
         markUserView.setOnRatingBarChangeListener(object : RatingBar.OnRatingBarChangeListener {
             override fun onRatingChanged(p0: RatingBar?, p1: Float, p2: Boolean) {
 
+
                 if(howModificationRating>0) {
-                    descriptionActionMark.setText("Zmień")
+                    if(descriptionActionMark.text.toString()=="Usuń" || descriptionActionMark.text.toString()=="Zmień") {
+
+
+                        descriptionActionMark.setText("Zmień")
+                    }
+                        typeAction=1
                 }
                 howModificationRating+=1
             }
@@ -525,8 +636,11 @@ private fun addActionToClickWriters(){
         }
 
 
+        Log.e("ocena",bookShowData.markBook.toFloat().toString()+" W GWIAZDKI")
 
         markAllUserViewStars.rating=bookShowData.markBook.toFloat()
+
+
         markBookAllUser.text=bookShowData.markBook
         howMarksBook.text="("+bookShowData.countMark+" ocen)"
 
@@ -574,6 +688,8 @@ private fun addActionToClickWriters(){
         setActionShowMarkAndGive()
         addActionToClickWriters()
         addCallbackChangeOrSetMark()
+        addCallbackClickInsertCommentBook()
+        checkIfUserCommentBook()
 
 
 
