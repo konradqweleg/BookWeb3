@@ -61,7 +61,7 @@ android:layout_marginBottom="30dp"
         android:layout_width="wrap_content"
         android:layout_alignEnd="@+id/Home_searchBook"
         android:src="@drawable/icon_loop"
-        android:paddingEnd="25dp"
+        android:paddingEnd="10dp"
 
 
 

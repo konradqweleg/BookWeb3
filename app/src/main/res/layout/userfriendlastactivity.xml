@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
         <RelativeLayout
-            android:layout_width="match_parent"
+            android:layout_width="320dp"
             android:elevation="5dp"
             android:layout_margin="5dp"
 
@@ -16,7 +16,7 @@
             android:paddingLeft="10dp"
 
             android:background="@drawable/search_theme"
-            android:layout_height="wrap_content">
+            android:layout_height="175dp">
 
             <com.makeramen.roundedimageview.RoundedImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"

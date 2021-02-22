@@ -114,11 +114,20 @@
 
 
         </RelativeLayout>
+    <ImageView
+        android:layout_width="16dp"
+        android:gravity="top"
+        android:background="@drawable/usericon"
+        android:layout_gravity="end|bottom"
+        android:elevation="5dp"
+        android:layout_marginRight="51dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="16dp"></ImageView>
     <TextView
         android:layout_width="35dp"
 
         android:gravity="top"
-        android:background="@drawable/round"
+
 
         android:layout_gravity="end|bottom"
         android:id="@+id/userMark"
@@ -133,7 +142,7 @@
 
         android:textSize="20sp"
         android:layout_marginRight="15dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="10dp"
 
            android:elevation="20dp"
 
